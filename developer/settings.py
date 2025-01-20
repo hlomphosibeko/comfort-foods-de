@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(9s9g5)$+1_6yuwd71$yy2x@sbmgd@v@44)ji+pv&yqjxw@#(6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-hlomphosibe-comfortfood-ybrwuwrd0ji.ws.codeinstitute-ide.net', '.herokuapp.com']
 
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hello_cuisine',
+    'foody',
 ]
 
 MIDDLEWARE = [
