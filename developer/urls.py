@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from foody.views import my_foody
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('my_foody.urls'), name='foody-urls'),
+    path('foody/', my_foody, name='foody'),
 ]

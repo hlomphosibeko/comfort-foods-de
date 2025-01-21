@@ -1,1 +1,0 @@
-#from foody.views import my_foody
