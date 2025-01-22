@@ -1,4 +1,6 @@
 {% load static %}
+{% url 'home' as home_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,6 +65,10 @@
     </div>
   </nav>
 
+  {% block content %}
+    <p>This is my default paragraph</p>
+  {% endblock content %}
+  
   <footer>
     <span>Connect with us on these platforms:</span>
         <a href="https://www.instagram.com" target="_blank" rel="noopener"
