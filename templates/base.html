@@ -17,7 +17,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>Comfort Foods.de|Taste Mzansi's flavours</title>
+  <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -47,8 +47,12 @@
     <p>This is my default paragraph</p>
   {% endblock content %}
   
-  <footer>
-    <span>Connect with us on these platforms:</span>
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border">
+    <div class="col-md-4 d-flex align-items-center">
+      <span class="text-muted">2024 Company, Inc</span>
+    </div>
+
+    <!-- <span>Connect with us on these platforms:</span>
         <a href="https://www.instagram.com" target="_blank" rel="noopener"
             aria-label="visit our Instagram page (opens in new tab)">
             <i class="fa-brands fa-square-instagram"></i></a>
@@ -57,7 +61,7 @@
             <i class="fa-brands fa-square-whatsapp"></i></a>
         <a href="https://www.tiktok.com" target="_blank" rel="noopener"
             aria-label="visit our Tiktok page (opens in new tab)">
-            <i class="fa-brands fa-tiktok"></i></a>
+            <i class="fa-brands fa-tiktok"></i></a> -->
   </footer>
 
 
