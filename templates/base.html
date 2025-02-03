@@ -29,13 +29,13 @@
    <nav class="navbar navbar-light navbar-expand-sm bg-light">
     <a href="/" class="navbar-brand">Comfort Foods.de</a>
     <ul class="navbar-nav mr-auto">
-      <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a>
+      <li class="active nav-item mr-2"><a class="nav-link" href="{% url 'home' %}">Home</a>
       </li>
-      <li class="nav-item mr-2"><a class="nav-link" href="">Menu</a>
+      <li class="nav-item mr-2"><a class="nav-link" href="{% url 'menu' %}">Menu</a>
       </li>
-      <li class="nav-item mr-2"><a class="nav-link" href="">Reservations</a>
+      <li class="nav-item mr-2"><a class="nav-link" href="{% url 'reservation' %}">Reservations</a>
       </li>
-      <li class="nav-item mr-2"><a class="nav-link" href="">About</a>
+      <li class="nav-item mr-2"><a class="nav-link" href="{% url 'about' %}">About</a>
       </li>
     </ul>
     <div class="d-none d-md-block">
@@ -46,9 +46,6 @@
   
           
 
-  {% block content %}
-    <p>This is my default paragraph</p>
-  {% endblock content %}
   
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border">
     <div class="col-md-4 d-flex align-items-center">
