@@ -41,19 +41,34 @@
     </ul>
 
     <div class="d-none d-md-block">
-      <p class="navbar-text my auto mr-2"><i>Make a reservation and visit our restaurant</i></p>
+      <p class="navbar-text my auto mr-2">
+        <i>Make a reservation and visit our restaurant</i></p>
       <a href="/reservation">Reservations</a>
     </div>
     
   </nav>
   
-          
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3 dark-bg">
+    <p class="m-0 text-center text-white">
+      {% block copyright %}
+      2024 Company, Inc
+      {% endblock copyright %}
+    </p>
+    <span class="m-0 text-center">Connect with us on these platforms:</span>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener"
+            aria-label="visit our Instagram page (opens in new tab)">
+            <i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.whatsapp.com" target="_blank" rel="noopener"
+            aria-label="visit our WhatsApp page (opens in new tab)">
+            <i class="fa-brands fa-square-whatsapp"></i></a>
+        <a href="https://www.tiktok.com" target="_blank" rel="noopener"
+            aria-label="visit our Tiktok page (opens in new tab)">
+            <i class="fa-brands fa-tiktok"></i></a>
+  </footer>        
 
   
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border">
-    <div class="col-md-4 d-flex align-items-center">
-      <span class="text-muted">2024 Company, Inc</span>
-    </div>
+  
 
     <!-- <span>Connect with us on these platforms:</span>
         <a href="https://www.instagram.com" target="_blank" rel="noopener"
