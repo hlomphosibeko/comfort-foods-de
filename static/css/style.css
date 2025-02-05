@@ -1,3 +1,13 @@
+body {
+    background-color: #F9FAFC;
+}
+
 .navbar-brand {
     font-size: 3rem;
+}
+
+.nav-item:hover,
+.nav-item:active {
+    color:black;
+    text-decoration: underline;
 }
