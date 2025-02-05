@@ -11,3 +11,9 @@ body {
     color:black;
     text-decoration: underline;
 }
+
+.carousel-item img {
+    background-size: cover;
+    height: calc(100vh - 102px);
+    padding: 10%;
+}
