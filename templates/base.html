@@ -1,4 +1,5 @@
 {% load static %}
+{% url 'about' as about_url %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +26,10 @@
 
 <body>
   <header>
+    <div class="d-none d-md-block">
+      <p class="navbar-text my auto mr-2">
+        <i>Make a reservation and visit our restaurant!</i> <span><a href="{% url 'reservations' %}">Reservations</a></span> </p>
+    </div>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-light navbar-expand-sm bg-light">
       <div class="container-fluid">
@@ -39,27 +44,22 @@
       </div>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
-        <li class="active nav-item mr-2">
-          <a class="nav-link" href="{% url 'home' %}">Home</a>
-        </li>
-        <li class="nav-item mr-2">
-          <a class="nav-link" href="{% url 'menu' %}">Menu</a>
-        </li>
-        <li class="nav-item mr-2">
-          <a class="nav-link" href="{% url 'reservations' %}">Reservations</a>
-        </li>
-        <li class="nav-item mr-2">
-          <a class="nav-link" href="{% url 'about' %}">About</a>
-        </li>
-      </ul>
-      <div class="d-none d-md-block">
-        <p class="navbar-text my auto mr-2">
-          <i>Make a reservation and visit our restaurant</i></p>
-        <a href="/reservation">Reservations</a>
+          <li class="active nav-item mr-2">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item mr-2">
+            <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+          </li>
+          <li class="nav-item mr-2">
+            <a class="nav-link" href="{% url 'reservations' %}">Reservations</a>
+          </li>
+          <li class="nav-item mr-2">
+            <a class="nav-link {% if request.path == about_url %}active{% endif %}"
+             aria-current="page" href="{% url 'about' %}">About</a>
+          </li>
+        </ul>
+        
       </div>
-      </div>
-    
-      
     </nav>
   </header>
 
