@@ -32,9 +32,13 @@
           <img src="{% static 'images/logo.jpg' %}" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
           Comfort Foods.de
         </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-base-target="#navbarText"
+         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-    
-      <ul class="navbar-nav mr-auto">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
         <li class="active nav-item mr-2">
           <a class="nav-link" href="{% url 'home' %}">Home</a>
         </li>
@@ -53,6 +57,9 @@
           <i>Make a reservation and visit our restaurant</i></p>
         <a href="/reservation">Reservations</a>
       </div>
+      </div>
+    
+      
     </nav>
   </header>
 

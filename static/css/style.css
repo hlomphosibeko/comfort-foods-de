@@ -17,3 +17,10 @@ body {
     height: calc(100vh - 102px);
     padding: 10%;
 }
+
+.carousel-item h1 {
+    position: relative;
+    z-index: 20;
+    font-size: large;
+    margin-top: 50%;
+}
