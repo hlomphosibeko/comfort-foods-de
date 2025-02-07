@@ -10,4 +10,4 @@ class Reservation(models.Model):
 
     
     def __str__(self):
-        return self.title
+        return self.full_name
