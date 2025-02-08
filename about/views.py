@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib import messages
 from .models import About
+from .forms import CollaborateForm
 
 # Create your views here.
 def about_us(request):
@@ -14,13 +15,12 @@ def about_us(request):
     #         messages.add_message(request, messages.SUCCESS)
 
     about = About.objects.all().order_by('-updated_on').first()
-   
-    # collaborate_form = CollaborateForm()
+    collaborate_form = CollaborateForm()
 
     return render(
         request, 
         "about/about.html",
         {"about": about,
-        # "collaborate_form":collaborate_form,
+        "collaborate_form":collaborate_form,
         },
-        )
+    )
