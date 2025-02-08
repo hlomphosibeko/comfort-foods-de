@@ -1,7 +1,25 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Menu{% endblock %}
 
 {% block body %}
+
+<h2>Platters</h2>
+
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static 'images/classic-platter' %}" class="img-fluid rounded-start" alt="meat platter">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Classic Meat Platter</h5>
+          <p class="card-text">Caters for 4 people.</p>
+          <p class="card-text"><small class="text-body-secondary">50€</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
     
 {% endblock %}

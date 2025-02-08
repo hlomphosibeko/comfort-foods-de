@@ -12,7 +12,7 @@ class Customer(models.Model):
         return self.first_name
 
 
-class Meal(models.Model):
+class Menu(models.Model):
     meal_name = models.CharField(max_length=200)
     description = models.CharField(
         max_length=200, default='', blank=True, null=True
@@ -25,7 +25,7 @@ class Meal(models.Model):
 
 class Orders(models.Model):
     meal = models.ForeignKey(
-        Meal, on_delete=models.CASCADE
+        Menu, on_delete=models.CASCADE
     )
     customer = models.ForeignKey(
         Customer, on_delete=models.CASCADE
