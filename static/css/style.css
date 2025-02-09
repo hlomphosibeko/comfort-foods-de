@@ -1,9 +1,16 @@
 body {
-    background-color: #F9FAFC;
+    background-color:brown;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
-.navbar-brand {
+/* .navbar-brand {
     font-size: 3rem;
+} */
+
+
+.navbar-text {
+    text-align: center;
 }
 
 .nav-item:hover,
@@ -12,16 +19,22 @@ body {
     text-decoration: underline;
 }
 
-.carousel-item img {
-    background-size: cover;
-    height: calc(100vh - 102px);
-    padding: 10%;
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2px;
+    background-color: rgb(187, 187, 147);
 }
 
-.carousel-item h1 {
-    position: relative;
-    z-index: 20;
-    font-size: large;
-    margin-top: 50%;
+footer>span {
+    color: black;
+    font-size: 0.8rem;
 }
-
+/* Social Media Icons */
+footer>a {
+    text-decoration: none;
+    padding: 0 15px;
+}
