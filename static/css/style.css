@@ -1,5 +1,5 @@
 body {
-    background-color:brown;
+    background-color: orangered;
     font-family: 'Roboto', sans-serif;
     
 }
@@ -8,7 +8,9 @@ body {
     font-size: 3rem;
 } */
 
-
+.text-end {
+    padding: 5px;
+}
 .navbar-text {
     text-align: center;
 }
@@ -24,17 +26,7 @@ body {
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 2px;
-    background-color: rgb(187, 187, 147);
+    margin-bottom: 0;
+    background-color: #853c00;
 }
 
-footer>span {
-    color: black;
-    font-size: 0.8rem;
-}
-/* Social Media Icons */
-footer>a {
-    text-decoration: none;
-    padding: 0 15px;
-}
