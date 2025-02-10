@@ -6,18 +6,18 @@
 {% block content %}
 
 
-{% for dish in my_menu %}
+{% for meal in my_menu %}
 <h2>Platters</h2>
 <div class="card mb-3" style="max-width: 540px;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="{{ dish.image }}" class="img-fluid rounded-start" alt="meat platter">
+        <img src="{{ meal.image }}" class="img-fluid rounded-start" alt="meat platter">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{ dish.meal_name }}</h5>
-          <p class="card-text">{{ dish.description }}</p>
-          <p class="card-text"><small class="text-body-secondary">{{ dish.price }}</small></p>
+          <h5 class="card-title">{{ meal.meal_name }}</h5>
+          <p class="card-text">{{ meal.description }}</p>
+          <p class="card-text"><small class="text-body-secondary">{{ meal.price }}</small></p>
         </div>
       </div>
     </div>
