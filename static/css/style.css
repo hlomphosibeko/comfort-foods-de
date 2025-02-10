@@ -1,12 +1,14 @@
 body {
     background-color: orangered;
     font-family: 'Roboto', sans-serif;
+    padding: 10px;
     
 }
 
 /* .navbar-brand {
     font-size: 3rem;
 } */
+
 
 .text-end {
     padding: 5px;

@@ -14,7 +14,9 @@ class Menu(models.Model):
 
     def __str__(self):
         return self.meal_name
-
+    
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
 
 class Customer(models.Model):
     first_name = models.CharField(max_length=250)
