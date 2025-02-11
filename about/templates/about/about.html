@@ -11,14 +11,14 @@
         <div class="col-md-4 text-container">
             <img src="{% static 'images/bestfriends.jpg' %}" class="rounded" width="75%" alt="placeholder image">
         </div>
-        <div class="col-8 text-white">
+        <div class="col-8">
             <h2>{{ about.title }}</h2>
             {{ about.content|safe }}
         </div>           
     </div>
     <div class="row">
         <div class="col text-right">
-            <p class="text-end text-white"><em>Updated on: {{ about.updated_on }}</em></p>
+            <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
     </div>
     <div class="row justify-content-center">

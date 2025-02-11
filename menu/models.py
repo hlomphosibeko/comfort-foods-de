@@ -2,12 +2,24 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
+class Category(models.Model):
+    name = models.CharField(max_length=250)
+    slug = models.CharField(max_length=250)
+
+    class Meta:
+        verbose_name_plural = 'categories'
+
+    def __str__(self):
+        return self.name
+
+
+
 class Menu(models.Model):
     meal_name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250)
-    category = models.CharField(max_length=250)
+    category = models.ForeignKey(Category, related_name='menu', on_delete=models.CASCADE, default=0)
     description = models.CharField(
-        max_length=200, default='', blank=True, null=True
+        max_length=200, default='description', blank=True, null=True
     )
     price = models.PositiveIntegerField()
     images = CloudinaryField('image', blank=True)
@@ -27,4 +39,14 @@ class Customer(models.Model):
         return self.first_name
  
 
+class Orders(models.Model):
+    meal = models.ForeignKey(
+        Menu, on_delete=models.CASCADE
+    )
+    customer = models.ForeignKey(
+        Customer, on_delete=models.CASCADE
+    )
+    status = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.status

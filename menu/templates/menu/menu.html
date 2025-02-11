@@ -5,9 +5,10 @@
 
 {% block content %}
 
-
-{% for meal in my_menu %}
+{% for category in categories %}
 <h2>{{ meal.category }}</h2>
+{% for meal in category.my_menu.all %}
+
 <div class="card mb-3" style="max-width: 400px;">
     <div class="row g-0">
       <div class="col-md-4">
@@ -18,11 +19,23 @@
           <h5 class="card-title">{{ meal.meal_name }}</h5>
           <p class="card-text">{{ meal.description }}</p>
           <p class="card-text"><small class="text-body-secondary">{{ meal.price }}</small></p>
+          <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
+        <button type="button" class="btn btn-danger btn-sm">Delete</button>
         </div>
       </div>
     </div>
   </div>
   {% endfor %}
+  {% endfor %}
 
+  <div class="card confirm-order">
+    <p class="card-text">Would you like to make any changes to your order?</p>
+
+    <button>Yes, I would like change order.</button>
+    <button>No, I am satisfied with my order.</button>
+  </div>
+  <div>
+    <p>In order to complete your order, please<a class="link" href="{{ signup_url }}">sign up</a> or simply login</p>
+  </div>
     
 {% endblock %}
