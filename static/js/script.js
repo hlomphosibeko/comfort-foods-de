@@ -4,9 +4,9 @@
  */
 
 
-const submitLink = document.getElementById();
+//const submitLink = document.getElementById();
 
-for (let button of submitLink);
+//for (let button of submitLink);
 
 
 // const carousel = new bootstrap.Carousel('#myCarousel')

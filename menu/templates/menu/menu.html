@@ -5,38 +5,111 @@
 
 {% block content %}
 
-{% for category in categories %}
-  <h2>{{ category.name }}</h2>
-  {% for meal in category.my_menu.all %}
-<div class="card mb-3" style="max-width: 400px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="{{ meal.images }}" class="img-fluid rounded-start" alt="menu">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{ meal.meal_name }}</h5>
-          <p class="card-text">{{ meal.description }}</p>
-          <p class="card-text"><small class="text-body-secondary">€{{ meal.price }}</small></p>
-          <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
-        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+
+<div class="container text-center">
+  <div class="row">
+    <!-- Braai Platters -->
+    <div class="col">
+      <h1>Braai Platter</h1>
+      {% for meal in platters %}
+      <div class="card mb-3" style="max-width: 550px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img width="200" src="{{ meal.images.url }}" class="img-fluid rounded-start" alt="menu">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ meal.meal_name }}</h5>
+            </div>
+            <p class="card-text text-center">{{meal.description}}</p>
+            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }}</small></p>
+            <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </div>
         </div>
       </div>
+      {% endfor %}
+    </div>
+    <!-- Hearty Meals -->
+    <div class="col">
+      <h1>Hearty Meals</h1>
+      {% for meal in hearty_meals %}
+      <div class="card mb-3" style="max-width: 550px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img width="200" src="{{ meal.images.url }}" class="img-fluid rounded-start" alt="menu">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ meal.meal_name }}</h5>
+            </div>
+            <p class="card-text text-center">{{meal.description}}</p>
+            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }}</small></p>
+            <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- Sides -->
+    <div class="col">
+      <h1>Sides</h1>
+      {% for meal in my_sides %}
+      <div class="card mb-3" style="max-width: 550px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img width="200" src="{{ meal.images.url }}" class="img-fluid rounded-start" alt="menu">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ meal.meal_name }}</h5>
+            </div>
+            <p class="card-text text-center">{{meal.description}}</p>
+            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }}</small></p>
+            <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- Mzansi Drinks -->
+    <div class="col">
+      <h1>Mzansi Drinks</h1>
+      {% for meal in drinks %}
+      <div class="card mb-3" style="max-width: 550px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img width="200" src="{{ meal.images.url }}" class="img-fluid rounded-start" alt="menu">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ meal.meal_name }}</h5>
+            </div>
+            <p class="card-text text-center">{{meal.description}}</p>
+            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }}</small></p>
+            <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
-  {% endfor %}
-{% endfor %}
-  
+</div>
 
-  <div class="card col-md-8 shadow-lg p-3 mb-5 bg-body-tertiary rounded position-relative">
-    <p class="card-text text-center">Would you like to make any changes to your order?</p>
 
-    <a href="#" class="btn btn-primary btn-sm">No, I am satisfied with my order.</a>
-    
-    <a href="#" class="btn btn-primary btn-sm">Yes I would like to change it.</a>
-  </div>
-  <div>
-    <p>In order to complete your order, please<a class="link" href="{{ signup_url }}">sign up</a> or simply login</p>
-  </div>
-    
+<!-- Prompt -->
+<div class="card col-md-8 shadow-lg p-3 mb-5 bg-body-tertiary rounded position-relative">
+  <p class="card-text text-center">Would you like to make any changes to your order?</p>
+
+  <a href="#" class="btn btn-primary btn-sm">No, I am satisfied with my order.</a>
+
+  <a href="#" class="btn btn-primary btn-sm">Yes I would like to change it.</a>
+</div>
+<div>
+  <p>In order to complete your order, please<a class="link" href="{{ signup_url }}">sign up</a> or simply login</p>
+</div>
+
 {% endblock %}
