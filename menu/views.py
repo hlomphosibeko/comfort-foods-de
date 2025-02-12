@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Menu, Category
+from .models import Menu
 
 # Create your views here.
 def menu(request):

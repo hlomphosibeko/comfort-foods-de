@@ -9,6 +9,10 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'categories'
 
+    @staticmethod
+    def get_all_categories():
+        return Category.objects.all()
+
     def __str__(self):
         return self.name
 
