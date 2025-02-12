@@ -9,9 +9,9 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'categories'
 
-    @staticmethod
-    def get_all_categories():
-        return Category.objects.all()
+    # @staticmethod
+    # def get_all_categories():
+    #     return Category.objects.all()
 
     def __str__(self):
         return self.name
@@ -21,9 +21,9 @@ class Category(models.Model):
 class Menu(models.Model):
     meal_name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250)
-    category = models.ForeignKey(Category, related_name='menu', on_delete=models.CASCADE, default=0)
+    category = models.ForeignKey(Category, related_name='menu', on_delete=models.CASCADE)
     description = models.CharField(
-        max_length=200, default='description', blank=True, null=True
+        max_length=200, default='', blank=True, null=True
     )
     price = models.PositiveIntegerField()
     images = CloudinaryField('image', blank=True)

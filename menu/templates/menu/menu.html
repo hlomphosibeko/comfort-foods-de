@@ -6,13 +6,12 @@
 {% block content %}
 
 {% for category in categories %}
-<h2>{{ meal.category }}</h2>
-{% for meal in category.my_menu.all %}
-
+  <h2>{{ category.name }}</h2>
+  {% for meal in category.my_menu.all %}
 <div class="card mb-3" style="max-width: 400px;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="{{ meal.image.url }}" class="img-fluid rounded-start" alt="menu">
+        <img src="{{ meal.images }}" class="img-fluid rounded-start" alt="menu">
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -26,7 +25,8 @@
     </div>
   </div>
   {% endfor %}
-  {% endfor %}
+{% endfor %}
+  
 
   <div class="card col-md-8 shadow-lg p-3 mb-5 bg-body-tertiary rounded position-relative">
     <p class="card-text text-center">Would you like to make any changes to your order?</p>
