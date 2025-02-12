@@ -43,7 +43,7 @@ class Customer(models.Model):
         return self.first_name
  
 
-class Orders(models.Model):
+class Order(models.Model):
     meal = models.ForeignKey(
         Menu, on_delete=models.CASCADE
     )
@@ -51,6 +51,7 @@ class Orders(models.Model):
         Customer, on_delete=models.CASCADE
     )
     status = models.CharField(max_length=200)
+
 
     def __str__(self):
         return self.status
