@@ -4,14 +4,11 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=250)
-    # slug = models.CharField(max_length=250)
+    slug = models.SlugField(unique=True)
 
     class Meta:
         verbose_name_plural = 'categories'
 
-    # @staticmethod
-    # def get_all_categories():
-    #     return Category.objects.all()
 
     def __str__(self):
         return self.name

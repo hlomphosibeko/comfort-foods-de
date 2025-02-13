@@ -23,6 +23,9 @@ def category(request):
     return render(request, "menu/menu.html", {
         'my_category': my_category})
 
+def menu_page(request, menu_category, menu_slug):
+    return render(request, "menu/menu-item-detail.html")
+
 # def categories():
 #     categories = list(Category.query.order_by(Category.category_name).all())
 #     return render_template("categories.html", categories=categories)
