@@ -25,7 +25,7 @@
             <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }}</small></p>
             <!-- <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
             <button type="button" class="btn btn-danger btn-sm">Delete</button> -->
-            <a href="{% url 'menu_detail' menu.slug %}">View meal details</a>
+            <a href="{% url 'menu_detail' meal.slug %}">View meal details</a>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@
       {% endfor %}
     </div>
     <!-- Sides -->
-    <!-- <div class="col">
+    <div class="col">
       <h1>Sides</h1>
       {% for meal in my_sides %}
       <div class="card mb-3" style="max-width: 550px;">
@@ -74,9 +74,9 @@
         </div>
       </div>
       {% endfor %}
-    </div> -->
+    </div>
     <!-- Mzansi Drinks -->
-    <!-- <div class="col">
+    <div class="col">
       <h1>Mzansi Drinks</h1>
       {% for meal in drinks %}
       <div class="card mb-3" style="max-width: 550px;">
@@ -98,7 +98,7 @@
       {% endfor %}
     </div>
   </div>
-</div> -->
+</div>
 
 
 <!-- Popover -->
