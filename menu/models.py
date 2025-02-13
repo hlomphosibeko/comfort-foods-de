@@ -16,9 +16,7 @@ class Menu(models.Model):
     meal_name = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(max_length=250, unique=True)
     category = models.ForeignKey(Category, related_name='menu', on_delete=models.CASCADE)
-    description = models.CharField(
-        max_length=200, default='', blank=True, null=True
-    )
+    description = models.TextField(blank=True, null=True)
     price = models.PositiveIntegerField()
     images = CloudinaryField('image', blank=True)
 
