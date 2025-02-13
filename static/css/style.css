@@ -9,7 +9,10 @@ body {
     font-size: 3rem;
 } */
 
-
+/* .carousel h1 {
+    transform: translate(-50%);
+    white-space: nowrap;
+} */
 
 .text-end {
     padding: 5px;
