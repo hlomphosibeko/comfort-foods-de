@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Menu, Customer, Category, Order
+from .models import Menu, Category, Customer, Order
 
 # Register your models here.
 admin.site.register(Menu)

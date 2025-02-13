@@ -9,10 +9,8 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'categories'
 
-
     def __str__(self):
         return self.name
-
 
 
 class Menu(models.Model):
@@ -28,8 +26,9 @@ class Menu(models.Model):
     def __str__(self):
         return self.meal_name
     
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     super().save(*args, **kwargs)
+
 
 class Customer(models.Model):
     first_name = models.CharField(max_length=250)

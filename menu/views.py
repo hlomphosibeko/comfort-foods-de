@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .models import Menu, Order, Category
+from .models import Menu, Category
 
 # Create your views here.
 def menu(request):
@@ -23,16 +23,15 @@ def category(request):
     return render(request, "menu/menu.html", {
         'my_category': my_category})
 
+
 def menu_page(request, menu_category, menu_slug):
     return render(request, "menu/menu-item-detail.html")
 
-# def categories():
-#     categories = list(Category.query.order_by(Category.category_name).all())
-#     return render_template("categories.html", categories=categories)
 
 
-def menu_order_delete(request):
-    if request.method == 'POST':
-        order = get_object_or_404(Order)
-        order.delete()
-        return HttpResponseRedirect()
+
+# def menu_order_delete(request):
+#     if request.method == 'POST':
+#         order = get_object_or_404(Order)
+#         order.delete()
+#         return HttpResponseRedirect()
