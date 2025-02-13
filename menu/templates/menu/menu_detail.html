@@ -1,5 +1,24 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block titel %}{% endblock %}
 
-{% block content %}{% endblock %}
+{% block content %}
+
+<div class="col-md-6">
+    <main>
+        <img src="{{ menu.images.url }}">
+        <div>
+            <h1 class="category">{{ menu.category }}</h1>
+            <p class="meal_name">{{ menu.meal_name }}</p>
+            <p class="description">{{ menu.description }}</p>
+            <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+        </div>
+    </main>
+    <section class="feedback">
+        <h3>Tell us what you think:</h3>
+    </section>
+</div>
+
+{% endblock %}

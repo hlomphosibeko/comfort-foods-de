@@ -27,7 +27,7 @@ def category(request):
 def menu_detail(request, slug):
     my_details = get_object_or_404(slug=slug)
     return render(request, "menu/menu_detail.html",
-                  {"my_details": my_details})
+        {"my_details": my_details})
 
 
 
