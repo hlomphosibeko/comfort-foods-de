@@ -28,11 +28,13 @@ def category(request):
 def menu_detail(request, slug):
     my_details = Menu.objects.get(slug=slug)
     form = MenuForm()
+    reviews = CustomerFeedback.objects.filter(menu=my_details)
     if request.method == "GET":
         
         return render(request, "menu/menu_detail.html",
         {"my_details": my_details,
-         "form": form})
+         "form": form,
+         "reviews": reviews})
     else:
         form = MenuForm(request.POST)
         if form.is_valid():
@@ -47,7 +49,8 @@ def menu_detail(request, slug):
 
         return render(request, "menu/menu_detail.html",
         {"my_details": my_details,
-         "form": form})
+         "form": form,
+         "reviews": reviews})
     
 
 

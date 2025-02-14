@@ -29,16 +29,32 @@
           {% for field in form %}
             {{ field.label_tag }}<br>
             {{ field }}<br>
+            
             {% for error in field.errors %}
               <p style="color:red">{{ error }}</p><br>
             {% endfor %}
+            <br>
           {% endfor %}
-          <br>
+          
           <button type="submit">Submit</button>
-        </form>
-        
+        </form>  
     </section>
+    
   </div>
+  <section>
+    {% for review in reviews %}
+      <h4>{{ review.name }}|{{ review.rating }}
+        {% if review.rating == 5 %}⭐⭐⭐⭐⭐
+        {% elif review.rating == 4 %}⭐⭐⭐⭐
+        {% elif review.rating == 3 %}⭐⭐⭐
+        {% elif review.rating == 2 %}
+        {% else %}⭐
+        {% endif %}
+      </h4>
+      <p>{{ review.text }}</p>
+      <br>
+    {% endfor %}
+  </section>
   
 
 
