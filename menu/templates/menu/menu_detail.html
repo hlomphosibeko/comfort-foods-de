@@ -17,6 +17,11 @@
       <button type="button" class="btn btn-danger btn-sm">Delete</button>
     </div>
     <section class="feedback p-50 bg-secondary-subtle rounded mt-70">
+      {% if messages %}
+          {% for message in messages %}
+          <p style="color:rgb(5, 129, 5)">{{ message }}</p>
+          {% endfor %}
+        {% endif %}
         <h4>Tell us what you think:</h4>
         <form method="POST">
           {% csrf_token %}
@@ -34,8 +39,10 @@
 
           <button type="submit">Submit</button>
         </form>
+        
     </section>
   </div>
+  
 
 
 {% endblock %}

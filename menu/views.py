@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from .models import Menu, Category, Order
+from django.contrib import messages
 from .forms import MenuForm
 
 # Create your views here.
@@ -37,7 +38,9 @@ def menu_detail(request, slug):
         form = MenuForm(request.POST)
         if form.is_valid():
             print(form.cleaned_data)
-            
+            messages.success(request, "Your cooked thoughts were successfully submitted ☺!")
+            form = MenuForm()
+
         return render(request, "menu/menu_detail.html",
         {"my_details": my_details,
          "form": form})
