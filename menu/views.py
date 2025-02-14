@@ -18,6 +18,9 @@ def menu(request):
         'my_sides': my_sides,
         'drinks': drinks})
 
+# def signup(request):
+#     return render(request, )
+
 
 def category(request):
     my_category = Category.objects.order_by(Category.name).all()
@@ -27,37 +30,41 @@ def category(request):
 
 def menu_detail(request, slug):
     my_details = Menu.objects.get(slug=slug)
-    form = MenuForm()
+    my_feedback = CustomerFeedback.objects.get(menu=my_details,id=1)
+    form = MenuForm(instance=my_feedback)
     reviews = CustomerFeedback.objects.filter(menu=my_details)
     if request.method == "GET":
         
-        return render(request, "menu/menu_detail.html",
-        {"my_details": my_details,
-         "form": form,
-         "reviews": reviews})
+        return render(request, "menu/menu_detail.html", {
+            "my_details": my_details,
+            "form": form,
+            "reviews": reviews,
+        })
     else:
-        form = MenuForm(request.POST)
+        form = MenuForm(request.POST,instance=my_feedback)
         if form.is_valid():
-            feedback = CustomerFeedback(
-                name = form.cleaned_data["name"],
-                rating = form.cleaned_data["rating"],
-                menu = my_details,
-                text = form.cleaned_data["text"]
-            )
-            feedback.save
+            form.save()
             messages.success(request, "Your cooked thoughts were successfully submitted ☺!")
 
-        return render(request, "menu/menu_detail.html",
-        {"my_details": my_details,
-         "form": form,
-         "reviews": reviews})
+        return render(request, "menu/menu_detail.html", {
+            "my_details": my_details,
+            "form": form,
+            "reviews": reviews,
+        })
+
+
+# def edit_feedback(request, slug):
+#     if request.method == "POST":
+
     
 
-
-
+# def delete_feedback()
 
 def menu_order_delete(request):
     if request.method == 'POST':
         order = get_object_or_404(Order)
         order.delete()
         return HttpResponseRedirect()
+
+
+
