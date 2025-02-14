@@ -25,18 +25,15 @@
         <h4>Tell us what you think:</h4>
         <form method="POST">
           {% csrf_token %}
-          {{ form.name.label_tag }}<br>
-          {% for error in form.name.errors %}
-            <p>{{ error }}</p>
-          {% endfor %}
-          {{ form.name }}<br>
 
-          {{ form.email.label_tag }}<br>
-          {% for error in form.email.errors %}
-            <p>{{ error }}</p>
+          {% for field in form %}
+            {{ field.label_tag }}<br>
+            {{ field }}<br>
+            {% for error in field.errors %}
+              <p style="color:red">{{ error }}</p><br>
+            {% endfor %}
           {% endfor %}
-          {{ form.email }}<br>
-
+          <br>
           <button type="submit">Submit</button>
         </form>
         

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
-from .models import Menu, Category, Order
+from .models import Menu, Category, Order, CustomerFeedback
 from django.contrib import messages
 from .forms import MenuForm
 
@@ -11,7 +11,6 @@ def menu(request):
     hearty_meals = Menu.objects.filter(category__name = 'Hearty Meals')
     my_sides = Menu.objects.filter(category__name = 'Sides')
     drinks = Menu.objects.filter(category__name = 'Mzansi Drinks')
-    # my_platter = platters.objects.filter(category__name = '')
     return render(request, "menu/menu.html",{
         'my_menu': my_menu,
         'platters': platters,
@@ -37,9 +36,14 @@ def menu_detail(request, slug):
     else:
         form = MenuForm(request.POST)
         if form.is_valid():
-            print(form.cleaned_data)
+            feedback = CustomerFeedback(
+                name = form.cleaned_data["name"],
+                rating = form.cleaned_data["rating"],
+                menu = my_details,
+                text = form.cleaned_data["text"]
+            )
+            feedback.save
             messages.success(request, "Your cooked thoughts were successfully submitted ☺!")
-            form = MenuForm()
 
         return render(request, "menu/menu_detail.html",
         {"my_details": my_details,

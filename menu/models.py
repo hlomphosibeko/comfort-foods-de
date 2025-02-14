@@ -48,3 +48,13 @@ class Order(models.Model):
 
     def __str__(self):
         return self.status
+    
+
+class CustomerFeedback(models.Model):
+    name = models.CharField(max_length=50)
+    rating = models.PositiveIntegerField()
+    menu = models.ForeignKey(Menu, on_delete=models.CASCADE)
+    text = models.TextField()
+
+    def __str__(self):
+        return f"{self.menu} | Rating {self.rating}"
