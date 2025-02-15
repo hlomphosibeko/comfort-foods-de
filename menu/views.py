@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
 from .models import Menu, Category, Order, CustomerFeedback
 from django.contrib import messages
@@ -53,8 +53,25 @@ def menu_detail(request, slug):
         })
 
 
-# def edit_feedback(request, slug):
-#     if request.method == "POST":
+def edit_feedback(request, slug):
+    """
+    view to edit comments
+    """
+    if request.method == "POST":
+       my_details =  get_object_or_404(slug=slug)
+       my_feedback = get_object_or_404(CustomerFeedback)
+       form = MenuForm(data=request.POST, instance=my_feedback)
+
+       if form.is_valid():
+           my_feedback = form.save(commit=False)
+           my_feedback.my_details = my_details
+           my_feedback.approve = False
+           my_feedback.save()
+           messages.success(request, "Feedback Updated!")
+    else:
+           messages.error(request, "Error updating feedback!")
+    
+    return HttpResponseRedirect(reverse('my_details'))
 
     
 
