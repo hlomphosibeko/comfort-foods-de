@@ -10,7 +10,6 @@ class MenuForm(forms.Form):
 """
 
 
-
 class MenuForm(forms.ModelForm):
     class Meta:
         model = CustomerFeedback

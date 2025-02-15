@@ -25,12 +25,15 @@
     {% endfor %}
     {% endif %}
     <h4>Tell us what you think:</h4>
-    <form method="POST">
+    <form method="POST" id="menuForm">
       {% csrf_token %}
 
       {% for field in form %}
-      {{ field.label_tag }}<br>
-      {{ field }}<br>
+      <div id="id_body">
+        {{ field.label_tag }}<br>
+        {{ field }}<br>
+      </div>
+      
 
       {% for error in field.errors %}
       <p style="color:red">{{ error }}</p><br>
@@ -38,7 +41,7 @@
       <br>
       {% endfor %}
 
-      <button type="submit">Submit</button>
+      <button class="submitButton" type="submit">Submit</button>
     </form>
   </section>
   <section>
@@ -52,12 +55,12 @@
       {% endif %}
     </h4>
     <p>{{ review.text }}</p>
-    <br>
+    
+    {% if user.is_authenticated %}
+    <button class="btn btn-edit" menu_id="{{ menu.id }}">Edit</button>
+    {% endif %}
     {% endfor %}
   </section>
 </div>
-
-
-
-
 {% endblock %}
+

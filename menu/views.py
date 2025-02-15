@@ -30,9 +30,10 @@ def category(request):
 
 def menu_detail(request, slug):
     my_details = Menu.objects.get(slug=slug)
-    my_feedback = CustomerFeedback.objects.get(menu=my_details,id=1)
+    my_feedback = CustomerFeedback.objects.filter(menu=my_details).first()
     form = MenuForm(instance=my_feedback)
     reviews = CustomerFeedback.objects.filter(menu=my_details)
+    
     if request.method == "GET":
         
         return render(request, "menu/menu_detail.html", {
@@ -43,30 +44,35 @@ def menu_detail(request, slug):
     else:
         form = MenuForm(request.POST,instance=my_feedback)
         if form.is_valid():
-            form.save()
+            new_feedback = form.save(commit=False)
+            new_feedback.menu = my_details
+            new_feedback.save()
             messages.success(request, "Your cooked thoughts were successfully submitted ☺!")
+
+        # form = MenuForm()
 
         return render(request, "menu/menu_detail.html", {
             "my_details": my_details,
             "form": form,
             "reviews": reviews,
+            
         })
 
 
-def edit_feedback(request, slug):
+def edit_feedback(request, slug, menu_id):
     """
     view to edit comments
     """
     if request.method == "POST":
        my_details =  get_object_or_404(slug=slug)
-       my_feedback = get_object_or_404(CustomerFeedback)
+       my_feedback = get_object_or_404(CustomerFeedback, pk=menu_id)
        form = MenuForm(data=request.POST, instance=my_feedback)
 
-       if form.is_valid():
-           my_feedback = form.save(commit=False)
-           my_feedback.my_details = my_details
-           my_feedback.approve = False
-           my_feedback.save()
+       if form.is_valid() and my_feedback.menu == request.my_details:
+           new_feedback = form.save(commit=False)
+           new_feedback.my_details = my_details
+           new_feedback.approve = False
+           new_feedback.save()
            messages.success(request, "Feedback Updated!")
     else:
            messages.error(request, "Error updating feedback!")
@@ -74,8 +80,8 @@ def edit_feedback(request, slug):
     return HttpResponseRedirect(reverse('my_details'))
 
     
+# def delete_feedback(request, slug, menu_id):
 
-# def delete_feedback()
 
 def menu_order_delete(request):
     if request.method == 'POST':

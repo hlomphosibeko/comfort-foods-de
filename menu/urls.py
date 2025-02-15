@@ -6,4 +6,5 @@ urlpatterns = [
   #  path('signup')
   # path('category')
    path('<slug:slug>/', views.menu_detail, name='menu_detail'),
+   path('<slug:slug>/edit_feedback/', views.edit_feedback, name='edit_feedback'),
  ]

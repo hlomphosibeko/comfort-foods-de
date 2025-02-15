@@ -3,6 +3,21 @@
  * An eventlistener will listen for the radio buttons to be clicked.
  */
 
+const editButton = document.getElementsByClassName("btn-edit")
+const commentText = document.getElementById("id_body")
+const commentForm = document.getElementById("menuForm")
+const submitButton = document.getElementsByClassName("submitButton")
+
+
+for (let button of editButton) {
+    button.addEventListener("click", (e) => {
+        let menuId = e.target.getAttribute("menu_id");
+        let feedbackContent = document.getElementById(`text${menuId}`).innerText;
+        commentText.value = feedbackContent;
+        submitButton.innerText = "Update";
+        commentForm.setAttribute("action", `edit_feedback/${menuId}`);
+    });
+}
 
 //const submitLink = document.getElementById();
 
