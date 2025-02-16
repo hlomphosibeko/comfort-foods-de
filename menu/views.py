@@ -11,12 +11,15 @@ def menu(request):
     hearty_meals = Menu.objects.filter(category__name = 'Hearty Meals')
     my_sides = Menu.objects.filter(category__name = 'Sides')
     drinks = Menu.objects.filter(category__name = 'Mzansi Drinks')
+    #menu_id=Menu.Id
     return render(request, "menu/menu.html",{
         'my_menu': my_menu,
         'platters': platters,
         'hearty_meals': hearty_meals,
         'my_sides': my_sides,
-        'drinks': drinks})
+        'drinks': drinks
+        #'menu_id':menu_id
+        })
 
 # def signup(request):
 #     return render(request, )
@@ -73,11 +76,11 @@ def edit_feedback(request, slug, menu_id):
            new_feedback.my_details = my_details
            new_feedback.approve = False
            new_feedback.save()
-           messages.success(request, "Feedback Updated!")
+           messages.add_message(request, messages.SUCCESS, "Feedback Updated!")
     else:
-           messages.error(request, "Error updating feedback!")
+           messages.add_message(request, messages.ERROR, "Error updating feedback!")
     
-    return HttpResponseRedirect(reverse('my_details'))
+    return HttpResponseRedirect(reverse('my_details', args=[slug]))
 
     
 # def delete_feedback(request, slug, menu_id):

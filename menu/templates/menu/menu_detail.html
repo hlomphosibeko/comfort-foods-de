@@ -32,14 +32,11 @@
      
         {{ field.label_tag }}<br>
         {{ field }}<br>
-      
-      
-
       {% for error in field.errors %}
       <p style="color:red">{{ error }}</p><br>
       {% endfor %}
       <br>
-      {% endfor %}
+      {% endfor %} 
 
       <button class="submitButton" type="submit">Submit</button>
     </form>
@@ -54,10 +51,11 @@
       {% else %}⭐
       {% endif %}
     </h4>
-    <p>{{ review.text }}</p>
+    <p id="comment">{{ review.text }}</p>
     
-    {% if user.is_authenticated %}
-    <button class="btn btn-edit" menu_id="{{ menu.id }}">Edit</button>
+    <!--and menu.name == CustomerFeedback.name-->
+    {% if user.is_authenticated  %}
+    <button class="btn btn-edit" menu_id="{{ meal.id }}">Edit</button>
     {% endif %}
     {% endfor %}
   </section>
