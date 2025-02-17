@@ -5,6 +5,8 @@ from django.contrib import messages
 from .forms import MenuForm
 
 # Create your views here.
+
+
 def menu(request):
     my_menu = Menu.objects.all()
     platters = Menu.objects.filter(category__name = 'Braai Platters')
@@ -38,7 +40,6 @@ def menu_detail(request, slug):
     reviews = CustomerFeedback.objects.filter(menu=my_details)
     
     if request.method == "GET":
-        
         return render(request, "menu/menu_detail.html", {
             "my_details": my_details,
             "form": form,
@@ -58,7 +59,6 @@ def menu_detail(request, slug):
             "my_details": my_details,
             "form": form,
             "reviews": reviews,
-            
         })
 
 
@@ -78,7 +78,8 @@ def edit_feedback(request, slug, menu_id):
            new_feedback.save()
            messages.add_message(request, messages.SUCCESS, "Feedback Updated!")
     else:
-           messages.add_message(request, messages.ERROR, "Error updating feedback!")
+           messages.add_message(
+               request, messages.ERROR, "Error updating feedback!")
     
     return HttpResponseRedirect(reverse('my_details', args=[slug]))
 
@@ -91,6 +92,3 @@ def menu_order_delete(request):
         order = get_object_or_404(Order)
         order.delete()
         return HttpResponseRedirect()
-
-
-

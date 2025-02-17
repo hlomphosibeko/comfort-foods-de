@@ -2,6 +2,8 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
+
+
 class Category(models.Model):
     name = models.CharField(max_length=250)
 
@@ -15,14 +17,15 @@ class Category(models.Model):
 class Menu(models.Model):
     meal_name = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(max_length=250, unique=True)
-    category = models.ForeignKey(Category, related_name='menu', on_delete=models.CASCADE)
+    category = models.ForeignKey(
+        Category, related_name='menu', on_delete=models.CASCADE)
     description = models.TextField(blank=True, null=True)
     price = models.PositiveIntegerField()
     images = CloudinaryField('image', blank=True)
 
     def __str__(self):
         return self.meal_name
-    
+
     # def save(self, *args, **kwargs):
     #     super().save(*args, **kwargs)
 
@@ -34,7 +37,7 @@ class Customer(models.Model):
 
     def __str__(self):
         return self.first_name
- 
+
 
 class Order(models.Model):
     meal = models.ForeignKey(
@@ -45,10 +48,9 @@ class Order(models.Model):
     )
     status = models.CharField(max_length=200)
 
-
-    def __str__(self): 
+    def __str__(self):
         return self.status
-    
+
 
 class CustomerFeedback(models.Model):
     name = models.CharField(max_length=50)
