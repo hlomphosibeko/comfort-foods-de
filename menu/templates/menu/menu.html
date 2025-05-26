@@ -1,15 +1,195 @@
 {% extends "base.html" %}
 {% load static %}
-
-{% block title %}Menu{% endblock %}
-
 {% block content %}
 
+ 
+{% comment %} <div class="container">
+    <div class="row">
+        <div class="col">
+            
+            {% for menu in menu_list %}
+                <div class="col-md-4">
+                    <img src="{% static 'images/logo.jpg' %}" class="img-fluid rounded-start" alt="placeholders">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in menu.featured_image.url %}
+                                <img class="card-img-top" src="{% static 'images/logo.jpg' %}" alt="placeholder image">
+                                {% else %}
+                                <img class="card-img-top" src="{{ menu.featured_image.url }}" alt="{{ menu.menu_title }}">
+                                <div class="image-flash">
+                                    <h2 class="card-title">{{ menu.menu_title }}</h2> 
+                                </div>
+                            </div>
+                            <p class="card-text">€{{ menu.price }}</p>
+                            <a href="{% url 'menu_detail' menu.slug %}" class="post-link"> 
+                            </a>
+                            <hr /> 
+                        </div>
+                    </div>
+                </div>
+                 {% if menu.category == |divisibleby:2 %} 
+            </div>
+            <div class="row"> 
+                 {% endif %} 
+                {% endfor %}
+            </div>
+            
+        </div>
+    </div>
+</div> {% endcomment %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Blog Entries Column -->         
+        <div class="col-12 mt-3 left">
+            <div class="row">            
+                {% for menu in menu_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                <img class="card-img-top" src="{{ menu.featured_image }}" alt="{{ menu.menu_title }}">
+                                <div class="image-flash">
+                                    <h2 class="card-title">{{ menu.menu_title }}</h2>                                    
+                                </div>
+                            </div>
+                            <p class="card-text">€{{ menu.price }}</p>
+                            <a href="{% url 'menu_detail' menu.slug %}" class="post-link">View meal details 
+                            </a>
+                            <hr />                            
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %} 
+            </div>
+            <div class="row"> 
+                {% endif %} 
+                {% endfor %}
+            </div>           
+        </div>
+    </div>
+</div>
 
-<div class="container text-center">
-  <div class="row">
+
+{% comment %} <div class="container text-center">
+    <div class="row"> 
+        {% for menu in menu_list %}
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+        
+                <div class="col-md-4">
+                    <img src="{% static 'images/logo.jpg' %}" class="img-fluid rounded-start" alt="placeholders">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ menu.menu_title }}</h5>
+                        <p class="card-text"><small class="text-muted">€ {{ menu.price }}</small></p>
+                        <a href="{% url 'menu_detail' menu.slug %}" class="menu-details">View meal detail.</a>
+                    </div>
+                </div>
+                    {% if forloop.counter|divisibleby:2 %}
+                    <div class="row">
+                    {% endif %} 
+                    </div>
+                    
+            </div>
+        </div>
+        {% endfor %} 
+     </div>
+</div>  {% endcomment %}
+        
+{% comment %} <div class="container-fluid">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for post in post_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ post.author }}</p>
+                                </div>
+                            </div>
+                            <a href="#" class="post-link">
+                                <h2 class="card-title">{{ post.title }}</h2>
+                            </a>
+
+                            <hr />
+                            <p class="card-text text-muted h6">{{ post.created_on}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div> {% endcomment %}
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+
+<!-- index.html content ends here -->
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% load static %} -->
+
+<!-- {% block title %}Menu{% endblock %} -->
+
+
+
+
+<!-- <div class="container text-center"> -->
+  <!-- <div class="row"> -->
     <!-- Braai Platters -->
-    <div class="col">
+    <!-- <div class="col">
       <h1>Braai Platters</h1>
       {% for meal in platters %}
       <div class="card mb-3" style="max-width: 550px;">
@@ -21,17 +201,17 @@
             <div class="card-body">
               <h5 class="card-title">{{ meal.meal_name }}</h5>
             </div>
-            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }}</small></p>
+            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }}</small></p> -->
             <!-- <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
             <button type="button" class="btn btn-danger btn-sm">Delete</button> -->
-            <a href="{% url 'menu_detail' meal.slug %}">View meal details</a>
+            <!-- <a href="{% url 'menu_detail' meal.slug %}">View meal details</a>
           </div>
         </div>
       </div>
       {% endfor %}
-    </div>
+    </div> -->
     <!-- Hearty Meals -->
-    <div class="col">
+    <!-- <div class="col">
       <h1>Hearty Meals</h1>
       {% for meal in hearty_meals %}
       <div class="card mb-3" style="max-width: 550px;">
@@ -43,17 +223,17 @@
             <div class="card-body">
               <h5 class="card-title">{{ meal.meal_name }}</h5>
             </div>
-            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }}</small></p>
+            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }}</small></p> -->
             <!-- <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
             <button type="button" class="btn btn-danger btn-sm">Delete</button> -->
-            <a href="{% url 'menu_detail' meal.slug %}">View meal details</a>
+            <!-- <a href="{% url 'menu_detail' meal.slug %}">View meal details</a>
           </div>
         </div>
       </div>
       {% endfor %}
-    </div>
+    </div> -->
     <!-- Sides -->
-    <div class="col">
+    <!-- <div class="col">
       <h1>Sides</h1>
       {% for meal in my_sides %}
       <div class="card mb-3" style="max-width: 550px;">
@@ -65,17 +245,17 @@
             <div class="card-body">
               <h5 class="card-title">{{ meal.meal_name }}</h5>
             </div>
-            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }}</small></p>
+            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }}</small></p> -->
             <!-- <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
             <button type="button" class="btn btn-danger btn-sm">Delete</button> -->
-            <a href="{% url 'menu_detail' meal.slug %}">View meal details</a>
+            <!-- <a href="{% url 'menu_detail' meal.slug %}">View meal details</a>
           </div>
         </div>
       </div>
       {% endfor %}
-    </div>
+    </div> -->
     <!-- Mzansi Drinks -->
-    <div class="col">
+    <!-- <div class="col">
       <h1>Mzansi Drinks</h1>
       {% for meal in drinks %}
       <div class="card mb-3" style="max-width: 550px;">
@@ -87,21 +267,21 @@
             <div class="card-body">
               <h5 class="card-title">{{ meal.meal_name }}</h5>
             </div>
-            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }} </small></p>
+            <p class="card-text text-center"><small class="text-body-secondary">€{{ meal.price }} </small></p> -->
             <!-- <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Select</button>
             <button type="button" class="btn btn-danger btn-sm">Delete</button> -->
-            <a href="{% url 'menu_detail' meal.slug %}">View meal details</a>
+            <!-- <a href="{% url 'menu_detail' meal.slug %}">View meal details</a>
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
-</div>
+</div> -->
 
 
 <!-- Popover -->
-<div class="card col-md-8 shadow-lg p-3 mb-5 bg-body-tertiary rounded position-relative">
+<!-- <div class="card col-md-8 shadow-lg p-3 mb-5 bg-body-tertiary rounded position-relative">
   <p class="card-text text-center">Would you like to make any changes to your order?</p>
 
   <a href="#" class="btn btn-primary btn-sm">No, I am satisfied with my order.</a>
@@ -110,6 +290,5 @@
 </div>
 <div>
   <p>In order to complete your order, please<a class="link" href="{{ signup_url }}">sign up</a> or simply login</p>
-</div>
+</div> -->
 
-{% endblock %}

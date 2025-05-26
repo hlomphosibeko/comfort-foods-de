@@ -5,4 +5,4 @@ from .models import CustomerFeedback
 class MenuForm(forms.ModelForm):
     class Meta:
         model = CustomerFeedback
-        fields = ('name', 'rating', 'text')
+        fields = ('meal', 'rating', 'text')
