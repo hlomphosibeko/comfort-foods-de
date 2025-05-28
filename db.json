@@ -1,1 +1,239 @@
-[{"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2025-02-04T15:33:51.267Z", "user": 1, "content_type": 4, "object_id": "2", "object_repr": "Becky", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2025-02-07T20:09:36.646Z", "user": 1, "content_type": 8, "object_id": "2", "object_repr": "Hlompho", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2025-02-07T20:10:38.196Z", "user": 1, "content_type": 8, "object_id": "3", "object_repr": "Leo", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2025-02-08T13:19:15.739Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "About Us", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2025-02-08T17:28:30.396Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "About Us", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2025-02-08T17:55:06.729Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "About Us", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2025-02-08T20:57:48.724Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "About Us", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2025-02-08T21:02:55.233Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "About Us", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2025-02-08T21:06:47.915Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "About Us", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2025-02-08T21:08:40.225Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "About Us", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2025-02-08T21:11:52.778Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "About Us", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2025-02-08T21:13:16.916Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "About Us", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2025-02-08T22:06:54.922Z", "user": 1, "content_type": 17, "object_id": "1", "object_repr": "Classic Meat Platter", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2025-02-08T22:10:38.988Z", "user": 1, "content_type": 17, "object_id": "2", "object_repr": "Samp and Beans", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2025-02-10T19:54:55.636Z", "user": 1, "content_type": 17, "object_id": "1", "object_repr": "Menu object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 16, "fields": {"action_time": "2025-02-10T20:00:23.245Z", "user": 1, "content_type": 17, "object_id": "2", "object_repr": "Traditional Meat Platter", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 17, "fields": {"action_time": "2025-02-10T20:00:43.088Z", "user": 1, "content_type": 17, "object_id": "2", "object_repr": "Traditional Meat Platter for 4", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Meal name\"]}}]"}}, {"model": "admin.logentry", "pk": 18, "fields": {"action_time": "2025-02-10T20:02:15.978Z", "user": 1, "content_type": 17, "object_id": "3", "object_repr": "Mzansi Meat Platter for 2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 19, "fields": {"action_time": "2025-02-10T21:07:28.059Z", "user": 1, "content_type": 17, "object_id": "3", "object_repr": "Mzansi Meat Platter for 2", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"}}, {"model": "admin.logentry", "pk": 20, "fields": {"action_time": "2025-02-10T21:07:40.373Z", "user": 1, "content_type": 17, "object_id": "2", "object_repr": "Traditional Meat Platter for 4", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"}}, {"model": "admin.logentry", "pk": 21, "fields": {"action_time": "2025-02-10T21:08:01.247Z", "user": 1, "content_type": 17, "object_id": "1", "object_repr": "Classic Meat Platter for 2", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"}}, {"model": "admin.logentry", "pk": 22, "fields": {"action_time": "2025-02-10T21:30:04.047Z", "user": 1, "content_type": 17, "object_id": "4", "object_repr": "Samp and Beans", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 23, "fields": {"action_time": "2025-02-10T21:31:15.274Z", "user": 1, "content_type": 17, "object_id": "5", "object_repr": "Idombolo", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 24, "fields": {"action_time": "2025-02-10T21:32:30.191Z", "user": 1, "content_type": 17, "object_id": "6", "object_repr": "Umngqusho", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 25, "fields": {"action_time": "2025-02-10T21:33:48.259Z", "user": 1, "content_type": 17, "object_id": "7", "object_repr": "Walky-talky soup", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 26, "fields": {"action_time": "2025-02-10T21:35:37.124Z", "user": 1, "content_type": 17, "object_id": "8", "object_repr": "Amarula", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 27, "fields": {"action_time": "2025-02-10T21:37:02.554Z", "user": 1, "content_type": 17, "object_id": "9", "object_repr": "Tiser", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 28, "fields": {"action_time": "2025-02-11T09:18:06.948Z", "user": 1, "content_type": 7, "object_id": "1", "object_repr": "About Us", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 29, "fields": {"action_time": "2025-02-11T20:54:26.619Z", "user": 1, "content_type": 17, "object_id": "9", "object_repr": "Tiser", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 30, "fields": {"action_time": "2025-02-11T20:59:13.886Z", "user": 1, "content_type": 17, "object_id": "9", "object_repr": "Tiser", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 31, "fields": {"action_time": "2025-02-11T20:59:34.657Z", "user": 1, "content_type": 17, "object_id": "8", "object_repr": "Amarula", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 32, "fields": {"action_time": "2025-02-11T20:59:39.444Z", "user": 1, "content_type": 17, "object_id": "7", "object_repr": "Walky-talky soup", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 33, "fields": {"action_time": "2025-02-11T20:59:44.129Z", "user": 1, "content_type": 17, "object_id": "6", "object_repr": "Umngqusho", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 34, "fields": {"action_time": "2025-02-11T20:59:49.094Z", "user": 1, "content_type": 17, "object_id": "5", "object_repr": "Idombolo", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 35, "fields": {"action_time": "2025-02-11T20:59:54.856Z", "user": 1, "content_type": 17, "object_id": "4", "object_repr": "Samp and Beans", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 36, "fields": {"action_time": "2025-02-11T20:59:59.804Z", "user": 1, "content_type": 17, "object_id": "3", "object_repr": "Mzansi Meat Platter for 2", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 37, "fields": {"action_time": "2025-02-11T21:00:04.893Z", "user": 1, "content_type": 17, "object_id": "2", "object_repr": "Traditional Meat Platter for 4", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 38, "fields": {"action_time": "2025-02-11T21:00:10.418Z", "user": 1, "content_type": 17, "object_id": "1", "object_repr": "Classic Meat Platter for 2", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 39, "fields": {"action_time": "2025-02-12T10:56:19.976Z", "user": 1, "content_type": 20, "object_id": "1", "object_repr": "Braai Platters", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 40, "fields": {"action_time": "2025-02-12T10:56:40.093Z", "user": 1, "content_type": 20, "object_id": "2", "object_repr": "Hearty Meals", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 41, "fields": {"action_time": "2025-02-12T10:57:05.376Z", "user": 1, "content_type": 20, "object_id": "3", "object_repr": "Mzansi Drinks", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 42, "fields": {"action_time": "2025-02-12T10:57:24.487Z", "user": 1, "content_type": 20, "object_id": "4", "object_repr": "Sides", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 43, "fields": {"action_time": "2025-02-12T11:01:05.911Z", "user": 1, "content_type": 17, "object_id": "1", "object_repr": "Traditional Meat Platter for 4", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 44, "fields": {"action_time": "2025-02-12T12:10:20.222Z", "user": 1, "content_type": 17, "object_id": "2", "object_repr": "Mzansi Meat Platter for 2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 45, "fields": {"action_time": "2025-02-12T12:31:27.383Z", "user": 1, "content_type": 17, "object_id": "1", "object_repr": "Traditional Meat Platter for 4", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"}}, {"model": "admin.logentry", "pk": 46, "fields": {"action_time": "2025-02-12T12:31:47.688Z", "user": 1, "content_type": 17, "object_id": "2", "object_repr": "Mzansi Meat Platter for 2", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"}}, {"model": "admin.logentry", "pk": 47, "fields": {"action_time": "2025-02-12T12:32:46.319Z", "user": 1, "content_type": 17, "object_id": "3", "object_repr": "Classic Meat Platter for 2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 48, "fields": {"action_time": "2025-02-12T12:34:03.552Z", "user": 1, "content_type": 17, "object_id": "4", "object_repr": "Samp and Beans", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 49, "fields": {"action_time": "2025-02-12T12:39:02.971Z", "user": 1, "content_type": 17, "object_id": "5", "object_repr": "Umngqusho and Samp", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 50, "fields": {"action_time": "2025-02-12T13:03:31.503Z", "user": 1, "content_type": 17, "object_id": "6", "object_repr": "Potato Fries", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 51, "fields": {"action_time": "2025-02-12T13:04:21.683Z", "user": 1, "content_type": 17, "object_id": "7", "object_repr": "Idombolo", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 52, "fields": {"action_time": "2025-02-12T13:05:56.607Z", "user": 1, "content_type": 17, "object_id": "8", "object_repr": "Walky-talky soup", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 53, "fields": {"action_time": "2025-02-12T13:07:59.810Z", "user": 1, "content_type": 17, "object_id": "9", "object_repr": "Amarula", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 54, "fields": {"action_time": "2025-02-12T13:09:14.942Z", "user": 1, "content_type": 17, "object_id": "10", "object_repr": "Tiser", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 55, "fields": {"action_time": "2025-02-12T23:39:40.455Z", "user": 1, "content_type": 17, "object_id": "10", "object_repr": "Tiser", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 56, "fields": {"action_time": "2025-02-12T23:39:47.628Z", "user": 1, "content_type": 17, "object_id": "9", "object_repr": "Amarula", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 57, "fields": {"action_time": "2025-02-12T23:39:55.306Z", "user": 1, "content_type": 17, "object_id": "8", "object_repr": "Walky-talky soup", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 58, "fields": {"action_time": "2025-02-12T23:40:03.017Z", "user": 1, "content_type": 17, "object_id": "7", "object_repr": "Idombolo", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 59, "fields": {"action_time": "2025-02-12T23:40:17.246Z", "user": 1, "content_type": 17, "object_id": "1", "object_repr": "Traditional Meat Platter for 4", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 60, "fields": {"action_time": "2025-02-12T23:40:32.291Z", "user": 1, "content_type": 20, "object_id": "4", "object_repr": "Sides", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 61, "fields": {"action_time": "2025-02-12T23:40:41.198Z", "user": 1, "content_type": 20, "object_id": "3", "object_repr": "Mzansi Drinks", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 62, "fields": {"action_time": "2025-02-12T23:45:29.935Z", "user": 1, "content_type": 20, "object_id": "4", "object_repr": "Sides", "action_flag": 2, "change_message": "[]"}}, {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$600000$yMyRxRoEN6PbKSsf7Gisb2$k04MhvS8bEjsbhAS053wnq67C/tndKjoD6tH1QwCxRY=", "last_login": "2025-02-10T13:28:51.386Z", "is_superuser": true, "username": "Project4", "first_name": "", "last_name": "", "email": "sibeko.hlompho@students.codeinstitute.net", "is_staff": true, "is_active": true, "date_joined": "2025-01-24T22:36:44.881Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 2, "fields": {"password": "pbkdf2_sha256$600000$7hm8e5dhfAJI1SMeLk3YTO$9E89DAg/B2k2VG5lsVx4d9WSm2+JbnaPXLjiMvIx+Gk=", "last_login": null, "is_superuser": false, "username": "Becky", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2025-02-04T15:33:51.043Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 3, "fields": {"password": "pbkdf2_sha256$600000$SogqJyfpFYlLCH4Bjn4RZB$1FDlmDkUYugUkf0YKAixj0KU4gqpjCftSLdKswv4U2s=", "last_login": "2025-02-07T11:03:43.836Z", "is_superuser": false, "username": "Django_test", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2025-02-07T11:03:43.586Z", "groups": [], "user_permissions": []}}, {"model": "sessions.session", "pk": "bh9shkjad7x9hkesbimax7qpnic4az7d", "fields": {"session_data": ".eJxVjktOxDAQRO_iNbJitz9Jluw5g9Xp7hADslHsSDNC3J0MmsXMtl7VU_2ohEff0tFkT5nVrIx6ecwWpE8pN8AfWN6rplr6nhd9q-g7bfqtsny93rtPgg3bdq7BeyduiDaYECRER5OswZGNRhzziguxH2R1NvqwAiEwAdvFOUDD4E8pEtWj9H-3lJ4Ju3DCrmYTYZwC2NFriHYax3heaNJariXJ5TvvVzUPv38evU2D:1tgVmv:4MgQKrayTOZLCNvt_ah3aDUyPyvG-FvWIRiVFucYlg0", "expire_date": "2025-02-21T21:21:25.375Z"}}, {"model": "sessions.session", "pk": "tc4y8f9fpw5fzcehl6yvhzrkpvk70dwc", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pDCMCAu3fcMZICpVA0kpV0Z765NutDtf-_9lwi0rSVsnZcwZ3ERSpx-t0jpwXUH-U711mRqdV3mKHdFHrTLsWV-Xg_376BQL98amdHowaRIBoY4GcjKorcIZ1I6JUJrANhHYMia0-SArNcE6B1pB-L9AdYpN2c:1tdaL0:qRa_05WR2rKb88j52x1Zb8IKGW_hZaCyNrmlDHPNTVQ", "expire_date": "2025-02-13T19:36:30.955Z"}}, {"model": "sessions.session", "pk": "xot3lgspfqz22d7ycqje9f20hsjx1k6g", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pACA0SX7j0DGWYGqRqalHbVeHdt0oVu_3vvbyrhutS0dpnTyOqijDr9bhnpKW0H_MB2nzRNbZnHrHdFH7Tr28Tyuh7u30HFXr-18x4EhmiDCUFCBDpLCUA2GgHmgpnYD1LARh-KI3RMjm0GcGjYefX-ANVtN_s:1tbTZU:B7vxBPpUdsjjjKwf8XmbVBqnzZNyT_iUCJnCNer_pyE", "expire_date": "2025-02-07T23:58:44.232Z"}}, {"model": "sessions.session", "pk": "xv7afsiwtglfpnta8xlqfxze7tcdxqqs", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pDCMCAu3fcMZICpVA0kpV0Z765NutDtf-_9lwi0rSVsnZcwZ3ERSpx-t0jpwXUH-U711mRqdV3mKHdFHrTLsWV-Xg_376BQL98amdHowaRIBoY4GcjKorcIZ1I6JUJrANhHYMia0-SArNcE6B1pB-L9AdYpN2c:1tbSQi:ahMo27e5HhlwRt7tWu2iza6e1q-mW6kQhwSWHgyTSfw", "expire_date": "2025-02-07T22:45:36.411Z"}}, {"model": "sessions.session", "pk": "y69hpvl8pw6bdop9mei2bnklmxh86ssj", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2pACA0SX7j0DGWYGqRqalHbVeHdt0oVu_3vvbyrhutS0dpnTyOqijDr9bhnpKW0H_MB2nzRNbZnHrHdFH7Tr28Tyuh7u30HFXr-18x4EhmiDCUFCBDpLCUA2GgHmgpnYD1LARh-KI3RMjm0GcGjYefX-ANVtN_s:1thTqF:CghQabz7VKoczgQNlNOoVkg8wSxOBlkBdwSVmd3-HAw", "expire_date": "2025-02-24T13:28:51.401Z"}}, {"model": "sites.site", "pk": 1, "fields": {"domain": "example.com", "name": "example.com"}}, {"model": "about.about", "pk": 1, "fields": {"title": "About Us", "profile_image": "image/upload/v1739037305/sja06tmimufe8eihvpdl.jpg", "updated_on": "2025-02-11T09:18:06.936Z", "content": "<p><span style=\"font-family: &quot;Arial Black&quot;;\">﻿Who are we?</span><br></p><p>Comfort Foods was founded by Buhlebendalo \"Buhle\" Makhathi and Angel \"Angie\" King, two bestfriends from South Africa. It was inspired by our love for home cooked meals and assisting working parents who are not always available to cook for their families. A home cooked meal is always the best choice for our tummies ;)</p><p>The restaurant was established in the year 2020 in the streets of Johannesburg. We have restaurants scattered around SA. With our lovely team, the vision was made possible. In the year 2023 we managed expand even further. As you can tell, the name of the restaurant is now Comfort Foods.de because we are now situated in Germany. We are targeting different people from different countries and cultures</p><p>If you are into traditional dishes, you are in for a treat. Check out our Menu page for our famous, traditional, South African dishes.&nbsp;</p><p>For our locations please contact us on the socials.</p><p>With Love, Besties!</p><p><br></p><p><br></p><p><br></p>"}}]
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Apv5kiAkkh6bwajhWoxIjF$nyLZ1DdoaEeYTitcC+V6F3OURanzrTWe+MKXZzsLDtY=",
+      "last_login": "2025-04-14T05:31:23.093Z",
+      "is_superuser": true,
+      "username": "cistudent",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-02-13T11:40:19.121Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$0FmU9ZHrLq6WF9e9j1JNTe$Y8W0QTbHXWSNceBm9O+bHQlCq5F+xsKJZTfwmY6GaYw=",
+      "last_login": "2025-04-11T13:46:23.093Z",
+      "is_superuser": false,
+      "username": "rotaco2578@mobilesm.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "rotaco2578@mobilesm.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-04-11T13:46:22.617Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$GCMyNBma663SqEIivzcB3y$y7AyOy8o49C/8MwfS3bRgTvZFSy3nEUEFv7xxZ2Pfbw=",
+      "last_login": "2025-04-14T02:55:49.862Z",
+      "is_superuser": false,
+      "username": "eval",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-04-14T02:55:49.359Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Uzv3IsgmCJxFasAyi1y3vX$bnlbSzEFgSSF7K+vttixsO5b54d5PctadbxT63WJcCg=",
+      "last_login": "2025-05-23T08:22:11.229Z",
+      "is_superuser": false,
+      "username": "Amon",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-05-23T08:22:10.795Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$9okG4vClBFaIewxIlhFp3M$rNejIgorygOTZhSxlSRRFKINH9wB8Vt2qt8UzP5nOg8=",
+      "last_login": "2025-05-25T18:08:14.437Z",
+      "is_superuser": false,
+      "username": "LadyL",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-05-25T18:08:14.129Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$EDGVnPEc44lV3hwMSGsYM4$8znbIicm5ExLOGBeJAjDSNa90u+LSTon6qwbPItxwvI=",
+      "last_login": "2025-05-27T09:55:47.905Z",
+      "is_superuser": false,
+      "username": "Lyida",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-05-27T09:55:47.604Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$vpWRAdveLc3bjZKhi5Glxu$3iduGLmIOBYNYdg33O9yWlThZA2s1K7YA97hQTTfadQ=",
+      "last_login": "2025-05-27T12:23:54.949Z",
+      "is_superuser": true,
+      "username": "Edison",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-05-27T10:32:42.615Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "7jou82jtq2rmtinfod20r677qq1v4z0c",
+    "fields": {
+      "session_data": ".eJxVjsFuwyAQRP-Fc4XwbhzAx9z7DWi9LDVJBJXBUqIo_16nyqG9zpt5mocKtPUlbE3WkKOa1KA-_mYz8UXKC8Qzla-quZa-5lm_KvpNm_6sUa6nd_efYKG27GsWP4tPkROOjlmSY2RAawwzWpaYxBtAAUwHPBrPDIZkdjgaYYrHXUrMdSv91y2lZ6YuMVBX02DR2wM4AA0wWjO4_UKT1nItQW7feb2ryTx_AMQATrs:1tjma6:2PosP3jnWBvchw0IEAR_51XLx18hzduwjZf-J8dkyM8",
+      "expire_date": "2025-03-02T21:53:42.226Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "blq0kzvpo2imup5setqqqqgpkxe12q78",
+    "fields": {
+      "session_data": ".eJxVj8EOwiAQRP-FsyGF0qX06N1vILsLWLTSpKVejP9um-jB68y8l8xLIPO8leqfcckpx-DjA_MkhrJN00l43OrotzUuPgcxCC3-MkK-x3IU4YblOkueS10yyWMiv-0qL3OI0_m7_ROMuI47bRwFDgguMaYUyKXWaFCxY-gbq61urQNQwA5t01PTa-aGCInAASLt0t-Pwx1LzYx1P4NVDMoas_Oqb6XSprPw_gCuh1H_:1u3Ei7:heDtIgdo2THYO7DUzlLqFYapEBtxK6wk2XBzMzogWDE",
+      "expire_date": "2025-04-25T13:46:23.125Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "kspbyz7g7341mwamtsnszux9zgcj8yk1",
+    "fields": {
+      "session_data": ".eJxVjstuwyAURP-FdYV4XcBeZt9vQHC5rkkiqAyWWkX59zhRFu12zszR3FiI-1jD3mkLJbOZOfbxN0sRL1SfIJ9j_WocWx1bSfxZ4W_a-WfLdD29u_8Ea-zrsQZySySZFDrhpLJ2AYAsNEAyCibwUk45oXITJqWztl7YJOTiEXTyzh_SiNj2Ol5uqqNgHJRDHGyWznhtvNWGT9aAlOa40Kn30mqgn--y_bJZ3B_OIkxk:1uJtLW:Ux7aGlFh_2Vcc_iUMuzuzgkO5uxX4xl-_T-D8ZeUD4Q",
+      "expire_date": "2025-06-10T12:23:54.966Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "nt3ok5px70y9vlfmix5qx0x2t9pz4q93",
+    "fields": {
+      "session_data": ".eJxVj0tuhDAQRO_idWThbwPL7OcMVrvdDk6IkcDMJsrdByRmwbZe1ZPqTyDRstcWnryWXDgF_sUyi7Hu8_whAu5tCvvGayhJjMKKWxaRfrieIH1j_VokLbWtJcqzIi-6yceSeP68ujfBhNt0rBUrg8AAPlmdhxidpyFxVs5x1Aa0h5j9oJ1N3neQmQxT55w1SXlPp_T943RzbYWwHWewiVGBhaHvnVFSQ3co9f8LxatRgg:1uINfP:J53QrciLeWwGYsXZpa5uYuTo86kRF5zAIUVWU70PjdU",
+      "expire_date": "2025-06-06T08:22:11.271Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "rxhwbil0epcq5ihz15q415orha8gf2q5",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSE8HAZcuu83EIaHVA0kpV0Z_12bdKHbe865L-bDtla_jbz4ObELQ3b63SjER247SPfQbp3H3tZlJr4r_KCDTz3l5_Vw_w5qGPVbQ8YSsiQVUaBUxhQASEID0FmBAyulSxQVukhKJ22sMCRksRE0WbTs_QHL7jbu:1uJrcQ:-FIyBr6_1ok1JKdyHsUynzfR4pVP7N1cjFtRRbOsYD4",
+      "expire_date": "2025-06-10T10:33:14.997Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "v4eedxe2fcd0ldtvprxjtc988rpozvv7",
+    "fields": {
+      "session_data": ".eJxVjzsOwjAQRO_iGln4t45T0nMGa_GuiSE4UuLQIO5OIkFBOzPvSfMSmNK01hafPJdcmCI_sIyir-s4HkTEtQ1xXXiOhUQvnPjLLpjuXPeCblivk0xTbXO5yH0iv-0izxPxePpu_wQDLsNOQwfWeYXJdzpoBE7GZXcM3pAPlggBQBkIxlidiZXO_pg0eZs3kvUm_f3Y3VxbSdi2M9hEr7ztVAAbrLQOvOnc-wN44FCx:1uJFle:mRQWk-oqssoF6fMSlTdcKNWYmZpNbBh16WmqA72Ux_A",
+      "expire_date": "2025-06-08T18:08:14.459Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "zwfhhx886gxzgkj8bh8fxddgrytk4rni",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAURO_C2pAv37bg0r1nIDB8pGpKUtqV8e7apAvdzntvXsqHdSl-bTL7MamzOqrD7xYDHjJtIN3DdKsadVrmMepN0Ttt-lqTPC-7-3dQQivfGuKiuJyQubOAZAuG4YEI4AGSsjgyLIbziXtygKEg0XJHgpB69f4AJkg5TQ:1u4CPj:tqkY418dDjQg_-ciCkodTNfvpG07vgZ61afDq6-kZgU",
+      "expire_date": "2025-04-28T05:31:23.150Z"
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": { "domain": "example.com", "name": "example.com" }
+  },
+  {
+    "model": "account.emailaddress",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "email": "rotaco2578@mobilesm.com",
+      "verified": false,
+      "primary": true
+    }
+  },
+  {
+    "model": "about.about",
+    "pk": 1,
+    "fields": {
+      "title": "About Us",
+      "profile_image": "image/upload/v1739531426/uaflbfus3zlsfiagjwad.jpg",
+      "updated_on": "2025-02-14T11:10:27.605Z",
+      "content": "<p><b>Who are we?</b></p><p>Comfort Foods was founded by Buhlebendalo \"Buhle\" Makhathi and Angel \"Angie\" King, two bestfriends from South Africa. It was inspired by our love for home cooked meals and assisting working parents who are not always available to cook for their families. A home cooked meal is always the best choice for our tummies ;).</p><p>The restaurant was established in the year 2020 in the streets of Johannesburg. We have restaurants scattered around SA. With our lovely team, the vision was made possible. In the year 2023 we managed expand even further. </p><p>As you can tell, the name of the restaurant is now Comfort Foods.de because we are now situated in Germany. We are targeting different people from different countries and cultures. If you are into traditional dishes, you are in for a treat. Check out our Menu page for our famous, traditional, South African dishes.</p><p>For our locations please contact us on the socials.</p><p>With Love, Besties!</p><p><br></p>"
+    }
+  },
+  {
+    "model": "about.collaboraterequest",
+    "pk": 1,
+    "fields": {
+      "name": "Hlompho",
+      "email": "ester@gmail.com",
+      "message": "hdwydsdigwe",
+      "read": false
+    }
+  },
+  {
+    "model": "about.collaboraterequest",
+    "pk": 2,
+    "fields": {
+      "name": "Name",
+      "email": "name.surname@domain.com",
+      "message": "name.surname@domain.com",
+      "read": false
+    }
+  },
+  {
+    "model": "about.collaboraterequest",
+    "pk": 3,
+    "fields": {
+      "name": "first last",
+      "email": "semima5392@morxin.com",
+      "message": "adsf",
+      "read": false
+    }
+  }
+]

@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
@@ -26,4 +28,4 @@ urlpatterns = [
     path("menu/", include("menu.urls"), name="menu-urls"),
     path("reservations/", include("reservations.urls"), name="reservations-urls"),
     path('summernote/', include('django_summernote.urls')),   
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

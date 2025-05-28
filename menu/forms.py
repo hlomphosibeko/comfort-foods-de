@@ -1,8 +1,8 @@
 from django import forms
-from .models import CustomerFeedback
+from .models import CustomerComment
 
 
-class MenuForm(forms.ModelForm):
+class CustomerCommentForm(forms.ModelForm):
     class Meta:
-        model = CustomerFeedback
-        fields = ('meal', 'rating', 'text')
+        model = CustomerComment
+        fields = ('text',)

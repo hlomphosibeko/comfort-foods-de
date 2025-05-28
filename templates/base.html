@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{% block title %}Comfort Foods.de{% endblock %}</title>
+  <title>Comfort Foods.de</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="comfort-foods-de, south-african-food, african-cuisine, mzansi-flavor">
@@ -40,8 +40,15 @@
         <a class="navbar-brand fst-italic fw-semibold" href="{% url 'home' %}">
           Comfort Foods.de
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-base-target="#navbarText"
-         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+         class="navbar-toggler" 
+         type="button" 
+         data-bs-toggle="collapse" 
+         data-base-target="#navbarText"
+         aria-controls="navbarText" 
+         aria-expanded="false" 
+         aria-label="Toggle navigation"
+        >
          <span class="navbar-toggler-icon"></span>
         </button>
       </div>
@@ -50,8 +57,7 @@
           <li class="active nav-item mr-2">
             <a class="nav-link" href="{% url 'home' %}">Home</a>
           </li>
-          
-          
+
           {% if user.is_authenticated %}
           <li class="nav-item mr-2">
             <a class="nav-link" href="{% url 'menu' %}">Menu</a>
