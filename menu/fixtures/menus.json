@@ -1,0 +1,152 @@
+[
+    {
+        "model": "menu.menu",
+        "pk": null,
+        "fields": {
+            "meal_title": "Mzansi Meat Platter",
+            "slug": "mzansi-meat-platter",
+            "category": "Braai Platter",
+            "customer": 1,
+            "content": "The word 'braai', which originates from the Afrikaans language, simply means 'barbecue' or 'grill'. However, the practice of grilling meat over an open flame has much deeper roots in South Africa.",
+            "created_on": "2025-05-29T13:16",
+            "status": 0,
+            "price": 65,
+            "updated_on": "2025-05-29T13:17"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": null,
+        "fields": {
+            "meal_title": "Amanqina Chicken Feet",
+            "slug": "amanqina-chicken-feet",
+            "category": "Hearty Meals",
+            "customer": 2,
+            "content": "Chicken feet are cooked and eaten in many countries. After an outer layer of hard skin is removed, most of the edible tissue on the feet consists of skin and tendons, with no muscle. This gives the feet a distinct gelatinous texture different from the rest of the chicken meat. In South Africa, chicken feet are mainly eaten in townships in all nine provinces, where they are known as 'moatwana or amanqina' (together with the head, intestine, hearts and giblets), 'runaways', and 'Amanqina' (in isiXhosa). The feet are submerged in hot water, so the outer layer of the skin can be removed by peeling it off, and then covered in seasonings and grilled. The name 'chicken dust' derives from the dust chickens create when scratching the ground with their feet. They are often eaten as a snack.",
+            "created_on": "2025-05-29T13:16",
+            "status": 0,
+            "price": 25,
+            "updated_on": "2025-05-29T13:17"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": null,
+        "fields": {
+            "meal_title": "Appletiser",
+            "slug": "appletiser",
+            "category": "Mzansi Drinks",
+            "customer": 3,
+            "content": "The word 'braai', which originates from the Afrikaans language, simply means 'barbecue' or 'grill'. However, the practice of grilling meat over an open flame has much deeper roots in South Africa.",
+            "created_on": "2025-05-29T13:16",
+            "status": 0,
+            "price": 7,
+            "updated_on": "2025-05-29T13:17"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": null,
+        "fields": {
+            "meal_title": "Amarula Liqueur",
+            "slug": "amarula-liqueur",
+            "category": "Mzansi Drinks",
+            "customer": 4,
+            "content": "Amarula is a cream liqueur from South Africa. It is made with sugar, cream and the fruit of the African marula tree (Sclerocarya birrea) which is also locally called the elephant tree or the marriage tree. It has an alcohol content of 17% by volume (34 proof). It has had some success at international spirit ratings competitions, winning a gold medal at the 2009 San Francisco World Spirits Competition.[1] It has the taste of slightly fruity caramel.",
+            "created_on": "2025-05-29T13:16",
+            "status": 0,
+            "price": 45,
+            "updated_on": "2025-05-29T13:17"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": null,
+        "fields": {
+            "meal_title": "Samp and Beans",
+            "slug": "samp-and-beans",
+            "category": "Mzansi Sides",
+            "customer": 5,
+            "content": "Samp and Beans is a traditional dish of the Nguni people of South Africa. Referred to as isistambu by the Zulu people and umngqusho by the Xhosa people , the biggest Nguni groups, the dish is made from slowly cooked sugar beans and samp (crushed corn kernels).",
+            "created_on": "2025-05-29T13:16",
+            "status": 0,
+            "price": 10,
+            "updated_on": "2025-05-29T13:17"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": null,
+        "fields": {
+            "meal_title": "Samp and Tripe",
+            "slug": "samp-and-tripe",
+            "category": "Hearty Meals",
+            "customer": 6,
+            "content": "Mala Mogodu. Mogodu is a Southern African food. Mogodu is a combination of chopped serobe (tripe) and mala (intestines) served as a stew often with hot pap or dumpling. For those that don't know what samp is, it is dried corn kernels. It's stamped and chopped until it's broken. It is South African food and not as fine as mealie-meal or mealie-rice.",
+            "created_on": "2025-05-29T13:16",
+            "status": 0,
+            "price": 35,
+            "updated_on": "2025-05-29T13:17"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": null,
+        "fields": {
+            "meal_title": "Classic Meat Platter",
+            "slug": "classic-meat-platter",
+            "category": "Braai Platter",
+            "customer": 1,
+            "content": "The word 'braai', which originates from the Afrikaans language, simply means 'barbecue' or 'grill'. However, the practice of grilling meat over an open flame has much deeper roots in South Africa.",
+            "created_on": "2025-05-29T13:16",
+            "status": 0,
+            "price": 75,
+            "updated_on": "2025-05-29T13:17"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": null,
+        "fields": {
+            "meal_title": "Potato Fries",
+            "slug": "potato-fries",
+            "category": "Mzansi Sides",
+            "customer": 2,
+            "content": "The potatoes are cut into different shapes, such as wedges, curls, or, most commonly, thin strips. After the optional but recommended step of blanching, the pieces are dried and then typically fried in a deep fryer.",
+            "created_on": "2025-05-29T13:16",
+            "status": 0,
+            "price": 10,
+            "updated_on": "2025-05-29T13:17"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": null,
+        "fields": {
+            "meal_title": "Idombolo",
+            "slug": "idombolo",
+            "category": "Mzansi Sides",
+            "customer": 3,
+            "content": "Dombolo, (also known as umbhako,[1] ujeqe, dipapata in Setswana and rostile in Xhosa), is a traditional South African steamed bread.[2] It is a popular staple food in many homes within South Africa.[2] The bread is prepared in a container in a pot of boiling water.[2] It differs from the traditional dumpling in that it is prepared using yeast instead of baking powder.[3] There are different variations of the dish around South Africa. In the Zulu culture, dombolo is cooked on top of a stew rather than on its own in a separate pot. That variation of the steamed bread is known amongst the Zulus as uJeqe.[4] Dombolo is often consumed with different kinds of side dishes such as chicken stew, beef stew, oxtail stew, lamb stew, or tripe.",
+            "created_on": "2025-05-29T13:16",
+            "status": 0,
+            "price": 7,
+            "updated_on": "2025-05-29T13:17"
+        }
+    },
+    {
+        "model": "menu.menu",
+        "pk": null,
+        "fields": {
+            "meal_title": "Traditional Meat Platter",
+            "slug": "traditional-meat-platter",
+            "category": "Braai Platter",
+            "customer": 4,
+            "content": "The word 'braai', which originates from the Afrikaans language, simply means 'barbecue' or 'grill'. However, the practice of grilling meat over an open flame has much deeper roots in South Africa.",
+            "created_on": "2025-05-29T13:16",
+            "status": 0,
+            "price": 65,
+            "updated_on": "2025-05-29T13:17"
+        }
+    }
+]

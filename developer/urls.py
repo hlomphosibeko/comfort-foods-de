@@ -24,9 +24,9 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("menu/", include("menu.urls"), name="menu-urls"),
-    # path('', include("foody.urls"), name="foody-urls"),
+    path('', include("foody.urls"), name="foody-urls"),
     # path("about/", include("about.urls"), name="about-urls"),
     # path("accounts/", include("allauth.urls")),
-    # path('summernote/', include('django_summernote.urls')),   
+    path('summernote/', include('django_summernote.urls')),   
 #  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ]
