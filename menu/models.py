@@ -27,3 +27,29 @@ class Menu(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     price = models.PositiveBigIntegerField()
+    updated_on = models.DateTimeField(auto_now=True)
+
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"The name of this meal is {self.meal_title}"
+
+
+class CustomerComment(models.Model):
+    menu = models.ForeignKey(
+        Menu, on_delete=models.CASCADE, related_name='comments'
+    )
+    customer = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='commenter'
+    )
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.customer}"
