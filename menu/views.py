@@ -24,7 +24,7 @@ def menu_detail(request, slug):
     :template:`menu/menu_detail.html`
     """
 
-    queryset = Menu.objects.filter(status=1)
+    queryset = Menu.objects.filter(status=0)
     menu = get_object_or_404(queryset, slug=slug)
 
     return render(
