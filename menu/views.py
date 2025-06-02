@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Menu
+from .forms import CustomerCommentForm
 
 
 # Create your views here.
@@ -26,9 +27,17 @@ def menu_detail(request, slug):
 
     queryset = Menu.objects.filter(status=0)
     menu = get_object_or_404(queryset, slug=slug)
+    comments = menu.comments.all().order_by("-created_on")
+    comment_count = menu.comments.filter(approved=True).count()
+    customer_form = CustomerCommentForm()
 
     return render(
         request,
         "menu/menu_detail.html",
-        {"menu": menu},
+        {
+            "menu": menu,
+            "comments": comments,
+            "comment_count": comment_count,
+            "customer_form": customer_form,
+        },
     )
