@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -14,9 +15,13 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <div class="image-flash">
-                                    <p class="author">Customer: {{ menu.customer }}</p>
-                                </div>
+                                {% if "placeholder" in menu.featured_image.url %}
+                                <img class="card-img-top" src="{% static 'images/logo.jpg' %}"
+                                alt="placeholder image">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ menu.featured_image.url }}" alt="{{ menu.meal_title }}">
+                                {% endif %}
+                                
                             </div>
                             <a href="{% url 'menu_detail' menu.slug %}" class="post-link">
                                 <h2 class="card-title">{{ menu.meal_title }}</h2>

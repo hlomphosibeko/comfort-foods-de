@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Not ordered"), (1, "Ordered"))
 
@@ -23,6 +24,7 @@ class Menu(models.Model):
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name='category'
     )
+    featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
