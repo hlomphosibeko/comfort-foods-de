@@ -7,7 +7,7 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
-                <h5 class="post-title">{{ meal.menu_title }}</h5>
+                <h5 class="post-title">{{ menu.meal_title }}</h5>
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ menu.customer }} | {{ menu.created_on }}</p>
             </div>
@@ -41,6 +41,7 @@
         <hr>
         </div>
     </div>
+
     <!-- Displaying Comments -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
@@ -50,10 +51,10 @@
                 to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="p-2 comments
-                {% if not comment.approved and comment.author == user %}
+                {% if not comment.approved and comment.customer == user %}
                 faded{% elif not comment.approved %} d-none{% endif %}">
                 <p class="font-weight-bold">
-                    {{ comment.author }}
+                    {{ comment.customer }}
                     <span class="font-weight-normal">
                     {{ comment.created_on }}
                     </span> wrote:
@@ -66,11 +67,18 @@
                     This comment is awaiting approval
                 </p>
                 {% endif %}
+                {% if user.is_authenticated and comment.customer == user %}
+                <button class="btn btn-edit"
+                    comment_id="{{ comment.id }}">Edit</button>
+                <button class="btn btn-delete"
+                    comment_id="{{ comment.id }}">Delete</button>
+                {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
+
         <!-- Creating New Comments -->
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
@@ -91,5 +99,33 @@
         </div>
     </div>
 </div>
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"
+                id="deleteModalLabel">Delete comment?</h5>
+                <button type="button" class="btn-close"
+                data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your comment?
+                This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">Close</button>
+                <a id="deleteConfirm" href="#" class="btn
+                btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
+
+{% block extras %}
+<script src="{% static 'js/comments.js' %}"></script>
+{% endblock %}
