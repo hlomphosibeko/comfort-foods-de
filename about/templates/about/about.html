@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% load crispy_forms_tags %}
+
 
 {% block title%}About - Comfort Foods.de{% endblock %}
 
@@ -21,18 +21,7 @@
             <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
-            <h2>Tell us what you think!</h2>
-            <p>Please fill out the form and tell us more.</p>
-
-            <form method="post">
-                {{ collaborate_form }}
-                {% csrf_token %}
-                <button class="btn btn-secondary"
-                type="submit">Submit</button>
-            </form>
-        </div>
+    
 </div>
 
 {% endblock %}
