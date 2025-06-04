@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     'cloudinary',
     'foody',
     'menu',
-    'ordercart',
     # 'reservations', 
 ]
 
