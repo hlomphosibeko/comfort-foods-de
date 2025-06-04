@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'foody',
     'menu',
-    'reservations', 
+    'reservation', 
 ]
 
 SITE_ID = 1

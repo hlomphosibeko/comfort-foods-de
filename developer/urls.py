@@ -24,5 +24,6 @@ urlpatterns = [
     path('', include("foody.urls"), name="foody-urls"),
     path("about/", include("about.urls"), name="about-urls"),
     path("accounts/", include("allauth.urls")),
+    path("reservation/", include("reservation.urls"), name="reservation-urls"),
     path('summernote/', include('django_summernote.urls')),   
 ]
