@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from menu.models import Menu
 from .models import Cart, OrderCart
 from django.views.decorators.http import require_POST
+from django.http import JsonResponse
 
 # Create your views here.
 @require_POST
@@ -31,7 +32,7 @@ def order_cart_add(request, menu_id):
         "message": f"Added {menu.meal_title} to cart"
     }
 
-    return (response_data)
+    return JsonResponse(response_data)
 
 
 def cart_detail(request):
@@ -41,4 +42,5 @@ def cart_detail(request):
     if cart_id:
         cart = get_object_or_404(Cart, id=cart_id)
 
-    return render(request, "ordercart/cart_detail.html", {"cart": cart})
+    return render(request, "ordercart/cart_detail.html", {"order_cart_add": order_cart_add})
+
