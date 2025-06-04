@@ -27,7 +27,7 @@ def table_booking(request):
     
     return render(
         request,
-        "reservation/reservation.html",
+        "table_booking.html",
         {
             "weekend": weekend,
             "validateDate": validateDate,
@@ -77,14 +77,14 @@ def bookingSubmit(request):
         else:
             messages.success(request, "Please Select A Table Service!")
             
-    return render(request, 'bookingSubmit.html', {
+    return render(request, 'table_booking.html', {
         'times':hour,
     })
 
 def userPanel(request):
     customer = request.customer
     reservations = Reservation.objects.filter(customer=customer).order_by('day', 'time')
-    return render(request, 'userPanel.html', {
+    return render(request, 'table_booking.html', {
         'customer':customer,
         'reservations':reservations,
     })
@@ -112,7 +112,7 @@ def userUpdate(request, id):
         return redirect('userUpdateSubmit', id=id)
 
 
-    return render(request, 'userUpdate.html', {
+    return render(request, 'table_booking.html', {
             'weekend':weekend,
             'validateWeekdays':validateDate,
             'delta24': delta24,
@@ -166,7 +166,7 @@ def userUpdateSubmit(request, id):
         return redirect('userPanel')
 
 
-    return render(request, 'userUpdateSubmit.html', {
+    return render(request, 'table_booking.html', {
         'times':hour,
         'id': id,
     })
@@ -180,7 +180,7 @@ def staffPanel(request):
     
     items = Reservation.objects.filter(day__range=[minDate, maxDate]).order_by('day', 'time')
 
-    return render(request, 'staffPanel.html', {
+    return render(request, 'table_booking.html', {
         'items':items,
     })
 
