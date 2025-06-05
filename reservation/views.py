@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from datetime import datetime, timedelta
 from .models import Reservation
 from django.contrib import messages
+from .forms import ReservationForm
 
 
 # Create your views here.
@@ -9,6 +10,8 @@ def index(request):
     return render(request, "index.html",{})
 
 def table_booking(request):
+    form = ReservationForm()
+
     weekend = validDay(12)
 
     validateDate = isDateValid(weekend)
@@ -29,13 +32,14 @@ def table_booking(request):
         request,
         "table_booking.html",
         {
+            "form": form,
             "weekend": weekend,
             "validateDate": validateDate,
         }
     )
 
 def bookingSubmit(request):
-    customer = request.customer
+    customer = request.user
     times = [
         "17:OO PM", "17:3O PM", "18:OO PM", "18:3O PM", "19:OO PM", "19:3O PM", "20:OO PM", "20:3O PM", "21:OO PM", "21:3O PM", "22:OO PM",  
     ]
