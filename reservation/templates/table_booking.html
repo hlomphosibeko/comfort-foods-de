@@ -4,7 +4,7 @@
 <h1>Make Your Reservation</h1>
 
 <div class="container-fluid">
-    {% if user.is_authenticated %}
+    
     <form>
         <div class="form-group">
             <label for="tableService">Select Table</label>
@@ -23,7 +23,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    {% endif %}
+    
 </div>
 
 {% endblock%}
