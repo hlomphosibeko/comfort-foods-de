@@ -2,15 +2,15 @@ from django.shortcuts import render, redirect
 from datetime import datetime, timedelta
 from .models import Reservation
 from django.contrib import messages
-from .forms import ReservationForm
+# from .forms import ReservationForm
 
 
 # Create your views here.
 def index(request):
     return render(request, "index.html",{})
 
-def table_booking(request):
-    form = ReservationForm()
+def tableBooking(request):
+    # form = ReservationForm()
 
     weekend = validDay(12)
 
@@ -21,7 +21,7 @@ def table_booking(request):
         day = request.POST.get('day')
         if table_service == None:
             messages.success(request, "Please book a table!")
-            return redirect('table_booking')
+            return redirect('tableBooking')
         
         request.session['day'] = day
         request.session['table_service'] = table_service
@@ -32,7 +32,7 @@ def table_booking(request):
         request,
         "table_booking.html",
         {
-            "form": form,
+            # "form": form,
             "weekend": weekend,
             "validateDate": validateDate,
         }
@@ -41,11 +41,11 @@ def table_booking(request):
 def bookingSubmit(request):
     customer = request.user
     times = [
-        "17:OO PM", "17:3O PM", "18:OO PM", "18:3O PM", "19:OO PM", "19:3O PM", "20:OO PM", "20:3O PM", "21:OO PM", "21:3O PM", "22:OO PM",  
+        "17:OO PM", "17:3O PM", "18:OO PM", "18:3O PM", "19:OO PM", "19:3O PM", "20:OO PM", "20:3O PM", "21:OO PM", "21:3O PM", "22:OO PM"  
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=12)
+    deltatime = today + timedelta(days=21)
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     maxDate = strdeltatime
 
@@ -88,7 +88,7 @@ def bookingSubmit(request):
 def userPanel(request):
     customer = request.customer
     reservations = Reservation.objects.filter(customer=customer).order_by('day', 'time')
-    return render(request, 'table_booking.html', {
+    return render(request, 'userPanel.html', {
         'customer':customer,
         'reservations':reservations,
     })
@@ -102,7 +102,7 @@ def userUpdate(request, id):
 
     delta24 = (userdatepicked).strftime('%Y-%m-%d') >= (today + timedelta(days=1)).strftime('%Y-%m-%d')
 
-    weekend = validDay(12)
+    weekend = validDay(21)
 
     validateDate = isDateValid(weekend)
 
@@ -116,9 +116,9 @@ def userUpdate(request, id):
         return redirect('userUpdateSubmit', id=id)
 
 
-    return render(request, 'table_booking.html', {
+    return render(request, 'userUpdate.html', {
             'weekend':weekend,
-            'validateWeekdays':validateDate,
+            'validateDate':validateDate,
             'delta24': delta24,
             'id': id,
         })
@@ -130,7 +130,7 @@ def userUpdateSubmit(request, id):
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=12)
+    deltatime = today + timedelta(days=21)
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     maxDate = strdeltatime
 
@@ -170,7 +170,7 @@ def userUpdateSubmit(request, id):
         return redirect('userPanel')
 
 
-    return render(request, 'table_booking.html', {
+    return render(request, 'userUpdateSubmit.html', {
         'times':hour,
         'id': id,
     })
@@ -178,13 +178,13 @@ def userUpdateSubmit(request, id):
 def staffPanel(request):
     today = datetime.today()
     minDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=12)
+    deltatime = today + timedelta(days=21)
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     maxDate = strdeltatime
     
     items = Reservation.objects.filter(day__range=[minDate, maxDate]).order_by('day', 'time')
 
-    return render(request, 'table_booking.html', {
+    return render(request, 'staffPanel.html', {
         'items':items,
     })
 

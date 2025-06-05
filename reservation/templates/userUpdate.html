@@ -9,7 +9,7 @@
 {% if user.is_authenticated %}
 <!--if 24hrs before nobat-->
 {% if delta24 == True %}
-<h1 class="text-center  mt-3">Edit Appointment</h1>
+<h1 class="text-center  mt-3">Edit Reservation</h1>
 
 <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
     <form method="post" action="{% url 'userUpdate' id %}" class="me-2 ms-2" required>
@@ -17,12 +17,14 @@
 
         <!--input service-->
         <div>
-            <h3 class="">Select Service:</h3>
+            <h3 class="">Select Table:</h3>
             <select class="form-select fs-3" name="service">
-                <option value="Doctor care">Doctor care</option>
-                <option value="Nursing care">Nursing care</option>
-                <option value="Medical social services">Medical social services</option>
-                <option value="Homemaker or basic assistance care">Homemaker or basic assistance care</option>
+                <option value="Table for 2">Table for 2</option>
+                <option value="Table for 4">Table for 4</option>
+                <option value="Table for 6">Table for 6</option>
+                <option value="Table for 8">Table for 8</option>
+                <option value="Table for 10">Table for 10</option>
+                <option value="Table for 12">Table for 12</option>
             </select>
         </div>
             <!--input day-->
@@ -44,7 +46,7 @@
 {% else %}
 
 <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black m-5 text-center fPersian">
-    <h1 class="text-danger">Editing Appointments Its Only Available 24hrs Before Appointment!</h1>
+    <h1 class="text-danger">Editing Reservation Is Only Available 24hrs Before Appointment!</h1>
     <a href="{% url 'userPanel' %}" class="btn btn-primary mt-5">Return To User Panel</a>
 </div>
 

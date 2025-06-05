@@ -3,7 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'menu' as menu_url %}
 {% url 'about' as about_url %}
-{% url 'table_booking' as table_booking_url %}
+{% url 'tableBooking' as tableBooking_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -54,7 +54,7 @@
     <!-- Callout -->
     <div class="d-none d-md-block">
       <p class="navbar-text my-auto mr-2">
-        <i>Make a reservation and visit our restaurant!</i> <span><a href="{% url 'table_booking' %}">Reservations</a></span>
+        <i>Make a reservation and visit our restaurant!</i> <span><a href="{% url 'tableBooking' %}">Reservations</a></span>
       </p>
     </div>
     <!-- Navigation -->
@@ -87,7 +87,7 @@
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item mr-2">
-                    <a class="nav-link" href="{% url 'table_booking' %}">Reservation</a>
+                    <a class="nav-link" href="{% url 'tableBooking' %}">Reservation</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>

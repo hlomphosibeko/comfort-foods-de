@@ -36,6 +36,7 @@ class Reservation(models.Model):
     time = models.CharField(
         max_length=10, choices=BOOKING_TIMES, default="17:00 PM"
     )
+    time_ordered = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
         return f"{self.customer.username} | day: {self.day} | time: {self.time}"
