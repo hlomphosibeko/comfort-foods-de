@@ -34,6 +34,8 @@
      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" 
      rel="stylesheet"
     >
+    {% block fonts %}
+    {% endblock %}
     <!-- Font Awesome CSS -->
     <link
      rel="stylesheet" 
@@ -138,16 +140,17 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">
+    <footer class="footer mt-auto py-3 bg-white">
+        <p class="m-0 text-center">
             {% block copyright %}
                 Copyright 2025 Comfort Foods.de
             {% endblock copyright %}
         </p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
+        <p class="m-0 text-center">Follow us: 
+            <a href="https://www.facebook.com" ><i class="fab fa-facebook-square ms-3"></i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter-square ms-3"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram-square ms-3"></i></a>
+            <a href="https://www.youtube.com"><i class="fab fa-youtube-square ms-3"></i></a>
         </p>
     </footer>
 
@@ -156,6 +159,8 @@
     </script>
     
     {% block extras %}
+    {% endblock %}
+    {% block home %}
     {% endblock %}
 </body>
 

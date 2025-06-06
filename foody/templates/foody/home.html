@@ -1,11 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block fonts %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Meddon&family=Montez&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+{% endblock %}
+
+
 {% block title %}Comfort Foods.de|Taste Mzansi Flavors{% endblock %}
 {% block content %}
   <div class="container-fluid ">
     <div class="carousel slide opacity-50" data-bs-ride="carousel">
-      <div class="carousel-inner">
+      <div class="carousel-inner" style="opacity:0.5;">
         <div class="carousel-item active">
           <img src="{% static 'images/umngqusho-neembotyi-samp-and-beans-tastemagazine.jpg' %}" class="d-block w-100" alt="samp and beans">
         </div>
@@ -17,12 +24,13 @@
         </div>
       </div>
     </div>
-    <h1 class="position-absolute top-50 start-50 translate-middle text-white">Welcome to Comfort Foods.de</h1>
+    <h1 class="position-absolute top-50 start-50 translate-middle fst-italic display-2">Welcome to Comfort Foods.de</h1>
 
     <div class="rewards">
       <p class=" text-bold">For more information and rewards, <a class="link" href="{{ signup_url }}">signup</a>  with us.</p>
     </div>
   </div>    
-    
+     
 {% endblock %}
+
  

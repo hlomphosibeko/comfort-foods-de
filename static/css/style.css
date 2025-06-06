@@ -1,5 +1,6 @@
 body {
     background-color: rgb(236, 212, 72);
+    margin: auto;
 }
 
 .brand {
@@ -7,6 +8,11 @@ body {
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
+}
+
+
+div.img {
+    opacity: 0.5;
 }
 
 .red-o {
@@ -17,16 +23,16 @@ body {
     font-weight: 300;
 }
 
-.light-bg {
+/* .light-bg {
     background-color: #fff;
-}
+} */
 
 .dark-bg {
     background-color: #445261;
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: rgb(236, 212, 72);
 }
 
 .card {
@@ -113,7 +119,7 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
+    background-color: green;
     color: #fff;
 }
 
@@ -142,7 +148,7 @@ body {
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: red;
 }
 
 .btn-like:hover,
