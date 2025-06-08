@@ -12,10 +12,10 @@ def index(request):
 def tableBooking(request):
     # form = ReservationForm()
 
-    weekend = validDay(12)
+    weekend = validDay(21)
 
     validateDate = isDateValid(weekend)
-
+    
     if request.method == "POST":
         table_service = request.POST.get('table_service')
         day = request.POST.get('day')
