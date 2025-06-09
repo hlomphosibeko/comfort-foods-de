@@ -85,7 +85,6 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 
 ## Testing
 ### Manual Testing
-
 #### Register Page
   - The sign up form has a defensive design which does not allow a user to submit the form without filling out all required fields. Please see below:
 
@@ -107,7 +106,12 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 
   ![URL](readme.md_file/url.png)
 
-#### Validator Testing
+#### Django Testing
+  - I did some testing to see if my code is working fine, however it keeps failing due to the category. Please see below: 
+
+  ![Django testing](readme.md_file/django-testing.png)
+
+### Validator Testing
   - I have manually tested my code using PEP8 Python Validator.
 
   ![Python Linter with errors](readme.md_file/pl-views-reserv.png)
@@ -115,8 +119,7 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   * There is an error due to long line that cannot be fixed.
   ![pep8-error](/readme.md_file/long-line.png)
 
-  - 
-  ![alt text](image.png)
+
 
 ### Planning Project
   - I used Balsamiq to plan my project. Please see below images:
@@ -138,6 +141,23 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   ![Balsamiq Reservation page](readme.md_file/reserve_page.jpg)
 
 
+## Bugs
+#### Home Page
+  - At the beginning of building the project, it was doing well. Please see below:
+  ![First home page](readme.md_file/welcome-page.png)
+
+  - Images did not want to appear on the preview. Please see below:
+  ![Images issue](readme.md_file/image-issue.png)
+
+#### Github issues
+  - I could not push my project to GitHub. Please see below:
+
+  ![Git push issue](readme.md_file/github-issue.png)
+
+  - I managed to fix the issue using commands from the workspace terminal. Please see below:
+
+  ![Fixed issue](readme.md_file/github-push-fixed.png)
+
 
 ## Deployment
   This project was deployed using Code Institute mock terminal for Heroku.
@@ -157,10 +177,13 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   * For the better understanding of creating a Restaurant Booking System, I used google to search for restaurants. The one restaurant that stood out for me was [Amrit-Restaurant](https://amrit.de/en/)
   * For a better understanding of how to create such a website I used the CI walkthrough, 'I think therefore I blog'.
   * Roman, Tutor CI, for assisting with how to create edit for comments
-  * My Mentor, Moritz
-  * Sarah, Tutor CI
+  * My Mentor, Moritz, helped with figuring out how to connect the views on the reservation page
+  * Rebecca, Tutor CI, helped me with authentication as I could not hide some links when user is not logged in.
 
 ### Media
+  * For a better understanding of how a reservation system works, I used a video and code from John Abdsho Khosrowabadi [Reservation Tutorial](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)
+  * The image on the About page was taken from [pexels](https://www.pexels.com/search/best%20friends%20in%20front%20of%20restaurant/)
+  * The images on the menu were taken from various site: [Logo](https://www.freepik.com/vectors/comfort-food); [Appletise](www.nkanyihouse.com); [Meat platter](www.ngunifoods.co.za); [Meat platter](www.instagram.com_spazaeats)
 
   
 
