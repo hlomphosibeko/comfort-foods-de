@@ -13,26 +13,29 @@
                 {% for menu in menu_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in menu.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'images/logo.jpg' %}"
-                                alt="placeholder image">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ menu.featured_image.url }}" alt="{{ menu.meal_title }}">
-                                {% endif %}
-                                
-                            </div>
-                            <a href="{% url 'menu_detail' menu.slug %}" class="post-link">
-                                <h2 class="card-title">{{ menu.meal_title }}</h2>
-                                <p>View detailed meal</p>
-                            </a>
-                            <p class="card-text">€{{ menu.price }}</p>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ menu.created_on}}
-                            </p>
-                            <hr />
+                        <div>
+                            <h3>{{ menu.category }}</h3>
+                            <div class="card-body">
+                                <div class="image-container">
+                                    {% if "placeholder" in menu.featured_image.url %}
+                                    <img class="card-img-top" src="{% static 'images/logo.jpg' %}"
+                                    alt="placeholder image">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ menu.featured_image.url }}" alt="{{ menu.meal_title }}">
+                                    {% endif %}
+                                    
+                                </div>
+                                <a href="{% url 'menu_detail' menu.slug %}" class="post-link">
+                                    <h2 class="card-title">{{ menu.meal_title }}</h2>
+                                    <p>View detailed meal</p>
+                                </a>
+                                <p class="card-text">€{{ menu.price }}</p>
+                                <hr />
+                                <p class="card-text text-muted h6">{{ menu.created_on}}
+                                </p>
+                                <hr />
 
+                            </div>
                         </div>
                     </div>
                 </div>
