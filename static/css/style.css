@@ -1,6 +1,7 @@
 body {
     background-color: rgb(236, 212, 72);
     margin: auto;
+    padding: 20px;
 }
 
 .brand {
@@ -41,9 +42,7 @@ div.img {
 }
 
 .image-container {
-    
-    height: 200px;
-    object-fit: cover;
+    position: relative;
 }
 
 .image-flash {

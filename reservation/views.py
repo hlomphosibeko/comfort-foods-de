@@ -6,15 +6,12 @@ from django.contrib import messages
 
 
 # Create your views here.
-def index(request):
-    return render(request, "index.html",{})
-
 def tableBooking(request):
     # form = ReservationForm()
 
     weekend = validDay(21)
 
-    validateDate = isDateValid(weekend)
+    validateDates = isDateValid(weekend)
     
     if request.method == "POST":
         table_service = request.POST.get('table_service')
@@ -34,7 +31,7 @@ def tableBooking(request):
         {
             # "form": form,
             "weekend": weekend,
-            "validateDate": validateDate,
+            "validateDates": validateDates,
         }
     )
 
@@ -69,7 +66,7 @@ def bookingSubmit(request):
                                 time = time,
                             )
                             messages.success(request, "Reservation Saved!")
-                            return redirect('index')
+                            return redirect('home')
                         else:
                             messages.success(request, "The Selected Time Has Been Reserved Before!")
                     else:
@@ -102,9 +99,9 @@ def userUpdate(request, id):
 
     delta24 = (userdatepicked).strftime('%Y-%m-%d') >= (today + timedelta(days=1)).strftime('%Y-%m-%d')
 
-    weekend = validDay(21)
+    weekends = validDay(21)
 
-    validateDate = isDateValid(weekend)
+    validateDates = isDateValid(weekends)
 
     if request.method == 'POST':
         table_service = request.POST.get('table_service')
@@ -117,8 +114,8 @@ def userUpdate(request, id):
 
 
     return render(request, 'userUpdate.html', {
-            'weekend':weekend,
-            'validateDate':validateDate,
+            'weekends':weekends,
+            'validateDates':validateDates,
             'delta24': delta24,
             'id': id,
         })

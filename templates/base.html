@@ -4,6 +4,8 @@
 {% url 'menu' as menu_url %}
 {% url 'about' as about_url %}
 {% url 'tableBooking' as tableBooking_url %}
+{% url 'staffPanel' as staffPanel_url %}
+{% url 'userPanel' as userPanel_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -55,7 +57,7 @@
 <body class="d-flex flex-column h-100 main-bg">
     <!-- Callout -->
     <div class="d-none d-md-block">
-      <p class="navbar-text my-auto mr-2">
+      <p class="navbar-text my-auto mr-2 text-center">
         <i>Make a reservation and visit our restaurant!</i> <span><a href="{% url 'tableBooking' %}">Reservations</a></span>
       </p>
     </div>
@@ -152,6 +154,8 @@
             <a href="https://www.instagram.com"><i class="fab fa-instagram-square ms-3"></i></a>
             <a href="https://www.youtube.com"><i class="fab fa-youtube-square ms-3"></i></a>
         </p>
+        <p class="m-0 text-center">Contact us: 030 1234-5678
+        </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
@@ -159,8 +163,6 @@
     </script>
     
     {% block extras %}
-    {% endblock %}
-    {% block home %}
     {% endblock %}
 </body>
 

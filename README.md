@@ -1,24 +1,42 @@
 # Comfort Foods.de
 
-Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant that sells South African Food and it is based in Europe. The target market are people who come from Africa that have not indulged in the meals in a long time and also for Europeans that like to try new food from different cultures. Customers may use the site to make a booking to come visit the store.
+Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant that sells South African Food and it is based in Europe. The target market are people who come from Africa that have not indulged in the meals in a long time and also for tourists from around the globe that like to try new food from different cultures. Customers may use the site to make a booking to come visit the store. The restaurant does not allow walk-ins, strictly bookings are allowed. The aim of the restaurant is to allow people from different cultures to experience the warmth and love added into the dishes. The restaurant does not allow online ordering, customers would have to experience the meals inside the establishment.
 
 ## Features
 ### Navigation bar
- -	A customer uses the navigation bar to navigate around the site
- -	Each link clicked directs the customer to that page
+ - A customer uses the navigation bar to navigate around the site
+ - Each link clicked directs the customer to a page where they can find more information
+ - When a customer is not on the home page, they can click on the restaurant name to be redirected back to the menu.
+ - A user can click the Reservation link at the top of any page to make a reservation.
+ - The visible links on the navigation bar are only visible when a user is logged in. Please see below:
 
- ![navigation-bar](readme.md_file/navigation-bar.png)
+ ![Navigation bar](readme.md_file/navigation-bar.png)
+
+ - When a user is not logged in, the only links visble are as shown below:
+
+ ![Logged out](readme.md_file/logout-nav.png)
 
 ### Home Page
- This page has a callout message welcoming the user to the site
- ![home-page](/readme.md_file/home-page1.png)
+ - This page has a callout message welcoming the user to the site
+ - It has a carousel effect which shows a few of our dishes served at the restaurant
+ - Below the images is a paragraph inviting users to signup in order to get rewards. Please see image below:
+
+ ![Home-page](/readme.md_file/home-page.png)
+ 
+### Footer
+ - Users can visit our social media sites to find out more information on a site
+ - They can also contact us to make bookings. Please see below:
+
+ ![Footer](readme.md_file/footer.png)
 
 ### Menu Page
-  o	The menu page shows our food menu as well as images of what is sold
-  o	The menu has 4 categories, namely: Braai – meat platters that consist of grilled meat types; Hearty Meals – consists of meals that bring comfort to the heart; Sides – these sides can be added to the hearty meals or Braai meat platters; and Drinks – these drinks are especially made in South Africa
-  o	A customer can select their food using the “select” button to order their food.
-  o	When a customer is done selecting their meal, they can then click the “submit order” button where they will be redirected to a page to make a Reservation
+  -	The menu page shows our food menu as well as images of what is sold
+  -	Braai – meat platters that consist of grilled meat types; Hearty Meals – consists of meals that bring comfort to the heart; Sides – these sides can be added to the hearty meals or Braai meat platters; and Drinks – these drinks are especially made in South Africa
+  -	A customer can select their food using the “select” button to order their food.
+  -	When a customer is done selecting their meal, they can then click the “submit order” button where they will be redirected to a page to make a Reservation
+
   ![menu-page](/readme.md_file/menu-page1.png)
+
 ### Reservations
   o	This page is used to make reservations to visit the restaurant.
   o	In order for a customer to make a reservation, they would need to sign up and log in 
