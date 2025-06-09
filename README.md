@@ -68,7 +68,7 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 
 ### Login Page
   - When a user is registered, they can simply login the site to browse. Please see below:
-  
+
   ![Log-in](readme.md_file/log-in.png)
   
 
@@ -78,12 +78,39 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   ![Register form](readme.md_file/register-form.png)
   
 
-
 ## Features to be implemented
-  •	Offer home deliveries  
-  •	Add more food to the menu
+  - Have a rewards page where users can view the amount of rewards hey have so they can get discounts depending on how often they visit the restaurant.
+  -	Create a system to allow online bookings 
+  -	Add more food to the menu
 
 ## Testing
+### Manual Testing
+
+#### Register Page
+  - The sign up form has a defensive design which does not allow a user to submit the form without filling out all required fields. Please see below:
+
+  ![Responsive signu up page](readme.md_file/responsive-signup.png)
+
+#### Login
+  - When a user is logged in, a success message pops-up with the username.
+  - There is another log in message that shows if a user is logged in or not
+
+  ![Log in success message](readme.md_file/login-message.png)
+
+#### Detailed Menu
+  - When a user clicks on the 'view detailed menu' link, the url changes
+  - The menu has a paginate function that allows a user to view the next and previous page of the menu
+
+  ![Next page](readme.md_file/next-page-menu.png)
+
+  ![Previous page](readme.md_file/prev-page-menu.png)
+
+  ![URL](readme.md_file/url.png)
+
+
+
+
+
   I have manually tested my code using PEP8 Python Validator.
   
   * There is an error due to long line that cannot be fixed.
