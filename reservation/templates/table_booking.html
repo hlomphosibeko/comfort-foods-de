@@ -12,8 +12,8 @@
 
         <!--input service-->
         <div>
-            <h3 class="">Select Table:</h3>
-            <select class="form-select fs-3" name="table_service">
+            <h3>Select Table:</h3>
+            <select class="fs-3" name="table_service">
                 <option value="Table for 2">Table for 2</option>
                 <option value="Table for 4">Table for 4</option>
                 <option value="Table for 6">Table for 6</option>
@@ -24,7 +24,7 @@
         </div>
         <!--input day-->
         <div class="mt-3">
-            <h3 class="">Date of Reservation:</h3>
+            <h3>Date of Reservation:</h3>
             <select class="format-select fs-3" name="day">
                 {% for validateDate in validateDates %}
                 <option value="{{validateDate}}">{{validateDate}}</option>
