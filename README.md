@@ -1,6 +1,6 @@
 # Comfort Foods.de
 
-Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant that sells South African Food based in Europe. The target market are people who come from Africa that have not indulged in the meals in a long time and also for Europeans that like to try new food from different cultures. Customers have to order from the menu provided online and make reservations to book a table
+Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant that sells South African Food and it is based in Europe. The target market are people who come from Africa that have not indulged in the meals in a long time and also for Europeans that like to try new food from different cultures. Customers may use the site to make a booking to come visit the store.
 
 ## Features
 ### Navigation bar
