@@ -9,9 +9,9 @@ from django.contrib import messages
 def tableBooking(request):
     # form = ReservationForm()
 
-    weekend = validDay(21)
+    weekends = validDay(21)
 
-    validateDates = isDateValid(weekend)
+    validateDates = isDateValid(weekends)
 
     if request.method == "POST":
         table_service = request.POST.get('table_service')
@@ -27,10 +27,10 @@ def tableBooking(request):
 
     return render(
         request,
-        "table_booking.html",
+        "tableBooking.html",
         {
             # "form": form,
-            "weekend": weekend,
+            "weekends": weekends,
             "validateDates": validateDates,
         }
     )
@@ -80,7 +80,7 @@ def bookingSubmit(request):
         else:
             messages.success(request, "Please Select A Table Service!")
             
-    return render(request, 'table_booking.html', {
+    return render(request, 'bookingSubmit.html', {
         'times':hour,
     })
 
@@ -125,7 +125,8 @@ def userUpdate(request, id):
 def userUpdateSubmit(request, id):
     customer = request.customer
     times = [
-        "17:OO PM", "17:3O PM", "18:OO PM", "18:3O PM", "19:OO PM", "19:3O PM", "20:OO PM", "20:3O PM", "21:OO PM", "21:3O PM", "22:OO PM" 
+        "17:OO PM", "17:3O PM", "18:OO PM", "18:3O PM", "19:OO PM", "19:3O PM",
+        "20:OO PM", "20:3O PM", "21:OO PM", "21:3O PM", "22:OO PM" 
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
@@ -155,7 +156,7 @@ def userUpdateSubmit(request, id):
                                 time = time,
                             ) 
                             messages.success(request, "Reservation Edited!")
-                            return redirect('index')
+                            return redirect('home')
                         else:
                             messages.success(request, "The Selected Time Has Been Reserved Before!")
                     else:
@@ -195,20 +196,20 @@ def dayToWeekend(x):
 def validDay(days):
     
     today = datetime.now()
-    weekend = []
+    weekends = []
     for i in range (0, days):
         x = today + timedelta(days=i)
         y = x.strftime('%A')
         if y == 'Friday' or y == 'Saturday' or y == 'Sunday':
-            weekend.append(x.strftime('%Y-%m-%d'))
-    return weekend
+            weekends.append(x.strftime('%Y-%m-%d'))
+    return weekends
 
 def isDateValid(x):
-    validateWeekend = []
+    validateWeekends = []
     for j in x:
         if Reservation.objects.filter(day=j).count() < 10:
-            validateWeekend.append(j)
-    return validateWeekend
+            validateWeekends.append(j)
+    return validateWeekends
 
 def checkTime(times, day):
     x = []

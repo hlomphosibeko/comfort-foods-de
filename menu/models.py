@@ -6,6 +6,9 @@ STATUS = ((0, "Not ordered"), (1, "Ordered"))
 
 # Create your models here.
 class Category(models.Model):
+    """
+    Groups the meals into their rightful categories.
+    """
     name = models.CharField(max_length=200)
 
     class Meta:
@@ -16,6 +19,9 @@ class Category(models.Model):
 
 
 class Menu(models.Model):
+    """
+    Stores a single meal entry related to :model:`customer.User`
+    """
     meal_title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     customer = models.ForeignKey(
@@ -40,6 +46,9 @@ class Menu(models.Model):
 
 
 class CustomerComment(models.Model):
+    """
+    Stores a single comment related to :model:`customer.User`
+    """
     menu = models.ForeignKey(
         Menu, on_delete=models.CASCADE, related_name='comments'
     )
