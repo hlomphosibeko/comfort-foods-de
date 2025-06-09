@@ -107,27 +107,39 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 
   ![URL](readme.md_file/url.png)
 
+#### Validator Testing
+  - I have manually tested my code using PEP8 Python Validator.
 
-
-
-
-  I have manually tested my code using PEP8 Python Validator.
+  ![Python Linter with errors](readme.md_file/pl-views-reserv.png)
   
   * There is an error due to long line that cannot be fixed.
   ![pep8-error](/readme.md_file/long-line.png)
+
+  - 
+  ![alt text](image.png)
+
+### Planning Project
+  - I used Balsamiq to plan my project. Please see below images:
+
+
 
 ## Deployment
   This project was deployed using Code Institute mock terminal for Heroku.
 
   * Steps for deployement
-    - Ensure GitHub project has public visibility
+    - Create a repository on GitHub
+    - On VS-code, connect the repository with the workspace and use git push command to push work into GitHub
+    - Ensure GitHub project has public visibility on Github
     - Create a new Heroku App
-    - Link the Heroku app to the repository
+    - Create configuration variables to connect the VS-Code with Heroku
+    - Link the Heroku app to the GitHub repository
     - Click on Deploy
 
 
 ## Credits
-  * For the better understanding of creating a Restaurant Booking System, 'I think therefore I blog' walkthrough.
+### Content
+  * For the better understanding of creating a Restaurant Booking System, I used google to search for restaurants. The one restaurant that stood out for me was [Amrit-Restaurant](https://amrit.de/en/)
+  * For a better understanding of how to create such a website I used the CI walkthrough, 'I think therefore I blog'.
   * Roman, Tutor CI, for assisting with how to create edit for comments
   * My Mentor, Moritz
   * Sarah, Tutor CI

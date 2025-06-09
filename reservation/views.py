@@ -12,19 +12,19 @@ def tableBooking(request):
     weekend = validDay(21)
 
     validateDates = isDateValid(weekend)
-    
+
     if request.method == "POST":
         table_service = request.POST.get('table_service')
         day = request.POST.get('day')
         if table_service == None:
             messages.success(request, "Please book a table!")
             return redirect('tableBooking')
-        
+
         request.session['day'] = day
         request.session['table_service'] = table_service
 
         return redirect('bookingSubmit')
-    
+
     return render(
         request,
         "table_booking.html",
@@ -35,10 +35,12 @@ def tableBooking(request):
         }
     )
 
+
 def bookingSubmit(request):
     customer = request.user
     times = [
-        "17:OO PM", "17:3O PM", "18:OO PM", "18:3O PM", "19:OO PM", "19:3O PM", "20:OO PM", "20:3O PM", "21:OO PM", "21:3O PM", "22:OO PM"  
+        "17:OO PM", "17:3O PM", "18:OO PM", "18:3O PM", "19:OO PM", "19:3O PM",
+        "20:OO PM", "20:3O PM", "21:OO PM", "21:3O PM", "22:OO PM"
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
