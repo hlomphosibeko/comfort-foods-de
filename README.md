@@ -121,6 +121,22 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 ### Planning Project
   - I used Balsamiq to plan my project. Please see below images:
 
+  * About Page
+
+  ![Balsamiq About page](readme.md_file/about_page.jpg)
+
+  * Home Page
+
+  ![Balsamiq Home page](readme.md_file/home_page.jpg)
+
+  * Menu Page
+
+  ![Balsamiq Menu page](readme.md_file/menu_page.jpg)
+
+  * Reservation Page
+
+  ![Balsamiq Reservation page](readme.md_file/reserve_page.jpg)
+
 
 
 ## Deployment
