@@ -58,6 +58,13 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   -	A customer would have to select the date, time and as well a table with the number of people being booked.
   
   ![Reservation form](readme.md_file/reserv-form.png)
+
+  ![Reserv-time form](readme.md_file/time-form.png)
+
+  - A user is redirected to the user panel page where they can view, edit and delete their booking
+  - When a user clicks on the edit button, they will be redirected to the first reservation page where they can change times, dates and table service.
+
+  ![Saved reservation](readme.md_file/saved-reserv.png)
   
 
 ### Logout Page
