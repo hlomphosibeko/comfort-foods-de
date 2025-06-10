@@ -68,7 +68,7 @@ def bookingSubmit(request):
                                 time = time,
                             )
                             messages.success(request, "Reservation Saved!")
-                            return redirect('home')
+                            return redirect('userPanel')
                         else:
                             messages.success(request, "The Selected Time Has Been Reserved Before!")
                     else:
@@ -85,7 +85,7 @@ def bookingSubmit(request):
     })
 
 def userPanel(request):
-    customer = request.customer
+    customer = request.user
     reservations = Reservation.objects.filter(customer=customer).order_by('day', 'time')
     return render(request, 'userPanel.html', {
         'customer':customer,
@@ -123,7 +123,7 @@ def userUpdate(request, id):
         })
 
 def userUpdateSubmit(request, id):
-    customer = request.customer
+    customer = request.user
     times = [
         "17:OO PM", "17:3O PM", "18:OO PM", "18:3O PM", "19:OO PM", "19:3O PM",
         "20:OO PM", "20:3O PM", "21:OO PM", "21:3O PM", "22:OO PM" 

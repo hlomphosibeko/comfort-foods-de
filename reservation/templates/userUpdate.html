@@ -1,7 +1,7 @@
 <title>Edit Appointment</title>
 {% extends 'base.html' %}
 {% load static %}
-{% block body %}
+{% block content %}
 
 
 
@@ -38,7 +38,7 @@
             </div>
 
             <br/>
-            <button type="submit" class="btn btn-primary text-white">Continue</button>
+            <button type="submit" class="btn btn-primary text-white">Click here for times</button>
         </div>
     </form>
 </div>
@@ -57,7 +57,7 @@
 
 <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
     <h1 class="p-2  me-3">You Are Not Signed in!</h1>
-    <a href="{% url 'register' %}" class="btn btn-primary shadow text-center">Sign in</a>
+    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
 </div>
 
 {% endif %}

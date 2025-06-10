@@ -82,6 +82,7 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   - Have a rewards page where users can view the amount of rewards hey have so they can get discounts depending on how often they visit the restaurant.
   -	Create a system to allow online bookings 
   -	Add more food to the menu
+  - Add background images of food on all pages
 
 ## Testing
 ### Manual Testing
