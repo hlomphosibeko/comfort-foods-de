@@ -18,7 +18,7 @@
         <!--input service-->
         <div>
             <h3 class="">Select Table:</h3>
-            <select class="form-select fs-3" name="service">
+            <select class="form-select fs-3" name="table_service">
                 <option value="Table for 2">Table for 2</option>
                 <option value="Table for 4">Table for 4</option>
                 <option value="Table for 6">Table for 6</option>
@@ -30,11 +30,15 @@
             <!--input day-->
             <div class="mt-3">
                 <h3 class="">Select Day:</h3>
-                <select class="form-select fs-3" name="day">
-                    {% for validateDate in validateDates %}
-                    <option value="{{validateDate}}">{{validateDate}}</option>
-                    {% endfor %}
-                </select>
+                {% if validateDates %}
+                    <select class="form-select fs-3" name="day">
+                        {% for validateDate in validateDates %}
+                        <option value="{{validateDate}}">{{validateDate}}</option>
+                        {% endfor %}
+                    </select>
+                {% else %}
+                    <p class="text-danger">No available reservation dates at the moment. Please come back again in a day.</p>
+                {% endif %}
             </div>
 
             <br/>

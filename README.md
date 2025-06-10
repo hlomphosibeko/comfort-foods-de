@@ -187,6 +187,7 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   * Roman, Tutor CI, for assisting with how to create edit for comments
   * My Mentor, Moritz, helped with figuring out how to connect the views on the reservation page
   * Rebecca, Tutor CI, helped me with authentication as I could not hide some links when user is not logged in.
+  * For a better understanding on how to add category to views, I used [W3Schools](https://www.w3schools.com/django/django_queryset_orderby.php)
 
 ### Media
   * For a better understanding of how a reservation system works, I used a video and code from John Abdsho Khosrowabadi [Reservation Tutorial](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)
