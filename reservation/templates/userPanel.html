@@ -28,6 +28,7 @@
             <p class="list-group mt-2">Service: {{ reservation.table_service }}</p>
             <div class="mt-3 mb-2">
                 <a class="btn btn-primary rounded-3 p-2" href="{% url 'userUpdate' reservation.id %}">Edit Booking</a>
+                <a class="btn btn-danger rounded-3 p-2" href="{% url 'userCancel' reservation.id %}">Cancel Booking</a>
             </div>
         </div>
         {% endfor %}

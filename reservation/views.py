@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from datetime import datetime, timedelta
+from django.http import HttpResponse
 from .models import Reservation
 from django.contrib import messages
 # from .forms import ReservationForm
@@ -39,8 +40,8 @@ def tableBooking(request):
 def bookingSubmit(request):
     customer = request.user
     times = [
-        "17:OO PM", "17:3O PM", "18:OO PM", "18:3O PM", "19:OO PM", "19:3O PM",
-        "20:OO PM", "20:3O PM", "21:OO PM", "21:3O PM", "22:OO PM"
+        "17:00 PM", "17:30 PM", "18:00 PM", "18:30 PM", "19:00 PM", "19:30 PM",
+        "20:00 PM", "20:30 PM", "21:00 PM", "21:30 PM", "22:00 PM"
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
@@ -122,11 +123,36 @@ def userUpdate(request, id):
             'id': id,
         })
 
+def userCancel(request, id):
+    # try:
+    #     reservation = Reservation.objects.get(id=id)
+    #     reservation.delete()
+    #     return HttpResponse("Reservation successfully canceled.")
+    # except Reservation.DoesNotExist:
+    #     return HttpResponse("Error: No reservation found with this ID", status=404)
+    reservation = get_object_or_404(Reservation, pk=id)
+
+    # # Date calculations
+    userdatepicked = reservation.day
+    today = datetime.today()
+    delta24 = (userdatepicked).strftime('%Y-%m-%d') >= (today + timedelta(days=1)).strftime('%Y-%m-%d')
+
+    weekends = validDay(21)
+    validateDates = isDateValid(weekends)
+
+    if reservation.customer == request.user:
+        reservation.delete()
+        messages.add_message(request, messages.SUCCESS, 'Booking deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete our own bookings!')
+
+    return redirect('userPanel')
+
 def userUpdateSubmit(request, id):
     customer = request.user
     times = [
-        "17:OO PM", "17:3O PM", "18:OO PM", "18:3O PM", "19:OO PM", "19:3O PM",
-        "20:OO PM", "20:3O PM", "21:OO PM", "21:3O PM", "22:OO PM" 
+        "17:00 PM", "17:30 PM", "18:00 PM", "18:30 PM", "19:00 PM", "19:30 PM",
+        "20:00 PM", "20:30 PM", "21:00 PM", "21:30 PM", "22:00 PM" 
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
