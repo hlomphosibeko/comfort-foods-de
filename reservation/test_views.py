@@ -38,3 +38,15 @@ class TestBookingSubmitViews(TestCase):
         response = self.client.get(reverse('bookingSubmit'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'bookingSubmit.html')
+
+    def test_post_request_valid_booking(self):
+        response = self.client.post(reverse("bookingSubmit"), {"time": "20:00 PM"})
+        self.assertEqual(response.status_code, 200)
+        
+
+    def test_post_request_time_already_reserved(self):
+        Reservation.objects.create(
+            customer=self.user, table_service="Table for 2", day=self.session["day"], time="19:00 PM"
+        )
+        response = self.client.post(reverse("bookingSubmit"), {"time": "19:00 PM"})
+        self.assertEqual(response.status_code, 200)
