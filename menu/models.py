@@ -5,19 +5,6 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Not ordered"), (1, "Ordered"))
 
 # Create your models here.
-class Category(models.Model):
-    """
-    Groups the meals into their rightful categories.
-    """
-    name = models.CharField(max_length=200)
-
-    class Meta:
-        verbose_name_plural = 'categories'
-
-    def __str__(self):
-        return self.name
-
-
 class Menu(models.Model):
     """
     Stores a single meal entry related to :model:`customer.User`
@@ -26,9 +13,6 @@ class Menu(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     customer = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="menu_meals"
-    )
-    category = models.ForeignKey(
-        Category, on_delete=models.CASCADE, related_name='category'
     )
     featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
