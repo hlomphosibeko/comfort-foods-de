@@ -14,7 +14,7 @@ class TestMenuViews(TestCase):
         )
         self.menu = Menu(meal_title="Menu title", customer=self.user,
                         slug="meal-title", content="Menu content", price=35,
-                        category="Hearty Meals", status=0)
+                        category="Name", status=0)
         self.menu.save()
 
     def test_render_menu_detail_page_with_customer_comment_form(self):

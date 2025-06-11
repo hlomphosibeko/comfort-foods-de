@@ -1,7 +1,7 @@
 body {
     background-color: rgb(236, 212, 72);
     margin: auto;
-    padding: 20px;
+    
 }
 
 .brand {
@@ -33,6 +33,15 @@ body {
     background-size: cover;
     padding: 5%;
     border-radius: 20px;
+}
+
+.logout-bg {
+    background-image: url('../images/pexels-robinstickel-70497.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 5%;
+    border-radius: 20px;
+    height: 50vh;
 }
 
 div.img {
