@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% load i18n %}
 {% load account socialaccount %}
@@ -7,8 +8,8 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
+<div class="container login-bg text-center text-white">
+    <div class="row transform-middle">
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>{% trans "Sign In" %}</h3>
 

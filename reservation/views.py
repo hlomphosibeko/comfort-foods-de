@@ -181,7 +181,7 @@ def userUpdateSubmit(request, id):
                                 day = day,
                                 time = time,
                             ) 
-                            messages.success(request, "Reservation Edited!")
+                            messages.success(request, "Reservation Edited, please check User Panel for confirmation!")
                             return redirect('home')
                         else:
                             messages.success(request, "The Selected Time Has Been Reserved Before!")
