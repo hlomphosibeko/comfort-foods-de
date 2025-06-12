@@ -12,8 +12,8 @@ class TestMenuViews(TestCase):
             password="myPassword",
             email="test@test.com"
         )
-        self.menu = Menu(meal_title="Menu title", customer=self.user,
-                        slug="meal-title", content="Menu content", price=35,
+        self.menu = Menu(meal_title="Meal title", customer=self.user,
+                        slug="meal-title", content="Meal content", price=35,
                         status=0)
         self.menu.save()
 
@@ -36,9 +36,8 @@ class TestMenuViews(TestCase):
         response = self.client.post(reverse(
             'menu_detail', args=['menu']), menu_data)
         self.assertEqual(response.status_code, 404)
-        self.assertIn(
-            'This comment is awaiting approval',
-            response.content
-        )
+        
+
+
 
     

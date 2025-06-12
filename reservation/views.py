@@ -69,7 +69,7 @@ def bookingSubmit(request):
                                 time = time,
                             )
                             messages.success(request, "Reservation Saved!")
-                            return redirect('userPanel')
+                            return redirect('userPane')
                         else:
                             messages.success(request, "The Selected Time Has Been Reserved Before!")
                     else:
