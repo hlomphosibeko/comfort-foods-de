@@ -113,11 +113,9 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   ![Previous page](readme.md_file/prev-page-menu.png)
 
   ![URL](readme.md_file/url.png)
+  
 
 #### Django Testing
-  - I did some testing to see if my code is working fine, however it keeps failing due to the category. Please see below: 
-
-  ![Django testing](readme.md_file/django-testing.png)
 
 ##### Testing Reservation
 ##### *Table Booking*
@@ -141,6 +139,27 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   - After changing the status code from 404 to 200, the test passed. Please see below:
 
   ![Test booking submission pass](readme.md_file/booking-submission-pass.png)
+
+  ![Testing Reservation](readme.md_file/testing-reservation.png)
+
+
+##### Testing Menu
+##### *Menu Functionality*
+  - I ran a test for the menu app to check if the customer form on menu detail is able to render, however it kept failing due to the category field that was not connected properly. Please see below: 
+
+  ![Django testing](readme.md_file/django-testing.png)
+
+  - I then decided to remove the category as it was a field that was added in error. I encountered another issue, where I put an incorrect attribute on the testing fields. Please see below:
+
+  ![Menu testing attribute](readme.md_file/menu-attr-test-fail.png)
+
+  - After adding the correct attribute, i got another error, AssertionError. Please see below:
+
+  ![Menu asserterror](readme.md_file/menu-404-error.png)
+
+  - Finally, I fixed the AssertionError, my test passed. Please see below:
+
+  ![Passed menu test](readme.md_file/menu-pass-test.png)
 
 ### Validator Testing
   - I have manually tested my code using PEP8 Python Validator.
