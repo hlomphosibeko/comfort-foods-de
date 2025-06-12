@@ -178,6 +178,22 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 
   ![Indentation resolved](readme.md_file/about-indentation.png)
 
+##### *Developer App*
+  * The settings file has a couple of errors namely - missing spaces, too long lines:
+
+  ![Settings issue](readme.md_file/settings-issue.png)
+
+  * Most issues were fixed, however there is one long line that cannot be shortened. Please see below:
+
+  ![Settings unfixed issue](readme.md_file/settings-unfixed.png)
+  
+  * Here the only issue were the whitespaces and a newline at the end of the code was needed. Please see below:
+
+  ![Settings whitespaces](readme.md_file/settings-whitespaces.png)
+
+  * Whitespaces are removed, and the newline has been added. No errors detected. Please see below:
+
+  ![Settings no whitespaces](readme.md_file/no-whitespaces.png)
 
 
 ### Planning Project
@@ -219,6 +235,10 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 
 
 ## Unfixed Bugs
+
+ * The settings.py file is not completely fixed due to one line that is too long. Please see below:
+
+  ![Settings unfixed issue](readme.md_file/settings-unfixed.png)
 
 ## Deployment
   This project was deployed using Code Institute mock terminal for Heroku.
