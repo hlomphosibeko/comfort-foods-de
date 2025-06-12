@@ -31,7 +31,7 @@ def menu_detail(request, slug):
     menu = get_object_or_404(queryset, slug=slug)
     comments = menu.comments.all().order_by("-created_on")
     comment_count = menu.comments.filter(approved=True).count()
-    
+
     if request.method == "POST":
         customer_form = CustomerCommentForm(data=request.POST)
         if customer_form.is_valid():
@@ -56,6 +56,7 @@ def menu_detail(request, slug):
             "customer_form": customer_form,
         },
     )
+
 
 def customer_comment_edit(request, slug, comment_id):
     """

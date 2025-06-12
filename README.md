@@ -195,6 +195,15 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 
   ![Settings no whitespaces](readme.md_file/no-whitespaces.png)
 
+##### *Menu App*
+  * There were lines where indentation was an issue. Please see below:
+
+  ![Menu indentation](readme.md_file/menu-indentation.png)
+
+  * After fixing the indentation error and removing trailing lines, the issues were fixed. Please see below:
+
+  ![Menu indentation fixed](readme.md_file/menu-fixed-indent.png)
+
 
 ### Planning Project
   - I used Balsamiq to plan my project. Please see below images:
@@ -236,9 +245,17 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 
 ## Unfixed Bugs
 
- * The settings.py file is not completely fixed due to one line that is too long. Please see below:
+  * The settings.py file is not completely fixed due to one line that is too long. Please see below:
 
   ![Settings unfixed issue](readme.md_file/settings-unfixed.png)
+
+  * The menu views have lines that are too long and cannot be shortened because they are url paths. Please see below:
+
+  ![Unfixed menu urls](readme.md_file/menu-urls.png)
+
+  * The menu views consist of two lines that are too long. I cannot fix them as they cause other indendantion errors. Please see below:
+
+  ![Menu lines too long](readme.md_file/menu-long-lines.png)
 
 ## Deployment
   This project was deployed using Code Institute mock terminal for Heroku.

@@ -4,6 +4,7 @@ from django.test import TestCase
 from .forms import CustomerCommentForm
 from .models import Menu
 
+
 class TestMenuViews(TestCase):
 
     def setUp(self):
@@ -12,9 +13,10 @@ class TestMenuViews(TestCase):
             password="myPassword",
             email="test@test.com"
         )
-        self.menu = Menu(meal_title="Meal title", customer=self.user,
-                        slug="meal-title", content="Meal content", price=35,
-                        status=0)
+        self.menu = Menu(
+            meal_title="Meal title", customer=self.user,
+            slug="meal-title", content="Meal content", price=35,
+            status=0)
         self.menu.save()
 
     def test_render_menu_detail_page_with_customer_form(self):
@@ -25,7 +27,7 @@ class TestMenuViews(TestCase):
         self.assertIn(b"Meal content", response.content)
         self.assertIsInstance(
             response.context['customer_form'], CustomerCommentForm)
-        
+
     def test_successful_comment_submission(self):
         """Test for writing a comment on a meal"""
         self.client.login(
@@ -36,8 +38,3 @@ class TestMenuViews(TestCase):
         response = self.client.post(reverse(
             'menu_detail', args=['menu']), menu_data)
         self.assertEqual(response.status_code, 404)
-        
-
-
-
-    

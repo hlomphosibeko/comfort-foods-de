@@ -4,6 +4,7 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Not ordered"), (1, "Ordered"))
 
+
 # Create your models here.
 class Menu(models.Model):
     """
@@ -20,7 +21,6 @@ class Menu(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     price = models.PositiveBigIntegerField()
     updated_on = models.DateTimeField(auto_now=True)
-
 
     class Meta:
         ordering = ["-created_on"]
