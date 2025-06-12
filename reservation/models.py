@@ -39,4 +39,4 @@ class Reservation(models.Model):
     time_ordered = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
-        return f"{self.customer.username} | day: {self.day} | time: {self.time}"
+        return f"{self.customer.username}| day: {self.day} | time: {self.time}"

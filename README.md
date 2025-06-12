@@ -204,6 +204,23 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 
   ![Menu indentation fixed](readme.md_file/menu-fixed-indent.png)
 
+##### *Reservation App*
+  * The reservation test views have a couple of errors pertaining to indentation, and long lines. Please see below:
+
+  ![Reservation issues](readme.md_file/reservation-issues.png)
+
+  * After some adjusting, there are two lines that are long and can't be shortened. Please see below:
+
+  ![Unresolved reservation](readme.md_file/reservation-lines.png)
+
+  * The reservation views show a number of issues with regards to indentation, comparison lines, as well as long lines. Please see below:
+
+  ![Reservation views results](readme.md_file/reservation-views.png)
+
+  * After carefully fixing the issues, there are some lines of code that cannot be fixed, like long lines. Some lines break the code when trying to shorten. There are comparison lines that cannot be changed either. Please see below:
+
+  ![Reservation unresolved lines of code](readme.md_file/reservation-unresolved.png)
+
 
 ### Planning Project
   - I used Balsamiq to plan my project. Please see below images:
@@ -256,6 +273,10 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   * The menu views consist of two lines that are too long. I cannot fix them as they cause other indendantion errors. Please see below:
 
   ![Menu lines too long](readme.md_file/menu-long-lines.png)
+
+  * Some lines break the code when trying to shorten. There are comparison lines that I cannot changed that are still raised as issues. Please see below:
+
+  ![Reservation unresolved lines of code](readme.md_file/reservation-unresolved.png)
 
 ## Deployment
   This project was deployed using Code Institute mock terminal for Heroku.
