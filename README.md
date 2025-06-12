@@ -113,9 +113,9 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   ![Previous page](readme.md_file/prev-page-menu.png)
 
   ![URL](readme.md_file/url.png)
-  
 
-#### Django Testing
+
+### Django Testing
 
 ##### Testing Reservation
 ##### *Table Booking*
@@ -168,6 +168,15 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
   
   * There is an error due to long line that cannot be fixed.
   ![pep8-error](/readme.md_file/long-line.png)
+
+##### *About App*
+  * The about views had an indentation issue. Please below:
+
+  ![Indentation issue](readme.md_file/about-indentation.png)
+
+  * After fixing the indentation, the below is the result:
+
+  ![Indentation resolved](readme.md_file/about-indentation.png)
 
 
 

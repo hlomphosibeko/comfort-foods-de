@@ -12,6 +12,5 @@ def about_us(request):
     return render(
         request,
         "about/about.html",
-        {"about": about,
-        },
+        {"about": about},
     )
