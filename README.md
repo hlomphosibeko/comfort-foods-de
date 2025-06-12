@@ -119,6 +119,29 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 
   ![Django testing](readme.md_file/django-testing.png)
 
+##### Testing Reservation
+##### *Table Booking*
+  - I ran a test to for booking a table, at first it failed to due to the incorrect status code. Please see below:
+
+  ![Test get table booking](readme.md_file/table-booking-test.png)
+
+  - After reading the AssertionError message, I changed that piece of code to status_code 200. This time it passed. Please see below:
+
+  ![Test get table booking - pass](readme.md_file/table-booking-test-pass.png)
+
+##### *Booking Submission*
+  - I ran a test to see if a booking can be submitted without any issues, the test failed because I had written the day and time session incorrectly. Please see below:
+
+  ![Test booking submission](readme.md_file/booking-submission-fail.png)
+
+  - As soon as I fixed that issue by placing the brackets where they belong, another error arised. Instead of a 404 status code, I was supposed to put a status code 200. Please see below:
+
+  ![Test booking submission fail](readme.md_file/book-submission-fail-2.png)
+
+  - After changing the status code from 404 to 200, the test passed. Please see below:
+
+  ![Test booking submission pass](readme.md_file/booking-submission-pass.png)
+
 ### Validator Testing
   - I have manually tested my code using PEP8 Python Validator.
 
@@ -166,6 +189,8 @@ Comfort Foods.de is a Restaurant Booking System. The site is for a restaurant th
 
   ![Fixed issue](readme.md_file/github-push-fixed.png)
 
+
+## Unfixed Bugs
 
 ## Deployment
   This project was deployed using Code Institute mock terminal for Heroku.

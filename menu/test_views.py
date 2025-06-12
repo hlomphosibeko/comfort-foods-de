@@ -14,17 +14,17 @@ class TestMenuViews(TestCase):
         )
         self.menu = Menu(meal_title="Menu title", customer=self.user,
                         slug="meal-title", content="Menu content", price=35,
-                        category="Name", status=0)
+                        status=0)
         self.menu.save()
 
-    def test_render_menu_detail_page_with_customer_comment_form(self):
+    def test_render_menu_detail_page_with_customer_form(self):
         response = self.client.get(reverse(
             'menu_detail', args=['meal-title']))
-        self.assertEqual(response.status_code, 404)
-        # self.assertIn(b"Meal title", response.content)
-        # self.assertIn(b"Meal content", response.content)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b"Meal title", response.content)
+        self.assertIn(b"Meal content", response.content)
         self.assertIsInstance(
-            response.context['customer_comment_form'], CustomerCommentForm)
+            response.context['customer_form'], CustomerCommentForm)
         
     def test_successful_comment_submission(self):
         """Test for writing a comment on a meal"""
@@ -33,10 +33,12 @@ class TestMenuViews(TestCase):
         menu_data = {
             'body': 'This is a test comment.'
         }
-        response = self.client.meal(reverse(
+        response = self.client.post(reverse(
             'menu_detail', args=['menu']), menu_data)
         self.assertEqual(response.status_code, 404)
         self.assertIn(
-            b'Comment submitted and awaiting approval',
+            'This comment is awaiting approval',
             response.content
         )
+
+    
