@@ -199,3 +199,12 @@ div.img {
     color: rgb(222, 146, 168);
 }
 
+.navbar-brand {
+    font-size: 3rem;
+}
+
+.nav-item:hover,
+.nav-item:active {
+    color:black;
+    text-decoration: underline;
+}

@@ -85,28 +85,34 @@
                 
                 {% if user.is_authenticated %}
                 <li class="nav-item mr-2">
-                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                    <a class="nav-link {% if request.path == menu_url %}active{% endif %}" aria-current="page" 
+                    href="{% url 'menu' %}">Menu</a>
                 </li>
                 <li class="nav-item mr-2">
-                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                    <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page" 
+                    href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item mr-2">
-                    <a class="nav-link" href="{% url 'tableBooking' %}">Reservation</a>
+                    <a class="nav-link {% if request.path == reservation_url %}active{% endif %}" aria-current="page" 
+                    href="{% url 'tableBooking' %}">Reservation</a>
                 </li>
                 <!-- Staff Panel -->
                 <li class="nav-item mr-2">
-                    <a class="nav-link" href="{% url 'staffPanel' %}">Staff Panel</a>
+                    <a class="nav-link {% if request.path == staffPanel %}active{% endif %}" aria-current="page" 
+                    href="{% url 'staffPanel' %}">Staff Panel</a>
                 </li>
                 <li class="nav-item dropdown me-3 fs-5">
                     <a class="nav-link active dropdown-toggle cHover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         User
                     </a>
                     <ul class="dropdown-menu  border zNav">
-                        <li><a class="dropdown-item" href="{% url 'userPanel' %}">User Panel</a></li>
+                        <li><a class="nav-link {% if request.path == userPanel %}active{% endif %}" aria-current="page" 
+                            href="{% url 'userPanel' %}">User Panel</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" 
+                    href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 
                 {% else %}
